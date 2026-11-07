@@ -1,0 +1,23 @@
+.eslintrc-auto-import.mjs
+  s_602cc37617e161::t_e597b8572d981d 125
+resources/js/components/side/Sidebar.vue
+  s_602cc37617e161::t_4898977b5eb380 3-7,48-54
+resources/js/composables/usePwa.js
+  s_602cc37617e161::t_79d648826cb7a1 1-9,11-19,54-69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2fbfb6fcad7830a515d5cdcd55f3c63cf17e5a8c",
+  "prompts": {},
+  "sessions": {
+    "s_602cc37617e161": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "94881066-61dc-43df-991f-7bb83c96d26e",
+        "model": "unknown"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
