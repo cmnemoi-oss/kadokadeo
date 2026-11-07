@@ -54,7 +54,7 @@ const router = createRouter({
     { path: '/runs/:id', name: 'runs.show', component: RunsShow, meta: { middleware: ['auth'], remount: true, title: 'Replay - KadoKadéo' } },
     { path: '/messages', name: 'messages.inbox', component: MessagesIndex, meta: { middleware: ['auth'], box: 'inbox', title: 'Messages - KadoKadéo' } },
     { path: '/messages/sent', name: 'messages.sent', component: MessagesIndex, meta: { middleware: ['auth'], box: 'sent', title: 'Messages - KadoKadéo' } },
-    { path: '/messages/new', name: 'messages.new', component: MessagesIndex, meta: { middleware: ['auth'], box: 'new', title: 'Messages - KadoKadéo' } },
+    { path: '/messages/new', name: 'messages.new', component: MessagesIndex, meta: { middleware: ['auth'], box: 'new', title: 'Messages - KadoKadéo', keepThroughLogin: true } },
     { path: '/messages/notifications', name: 'messages.notifications', component: MessagesIndex, meta: { middleware: ['auth'], box: 'notifications', title: 'Notifications - KadoKadéo' } },
     { path: '/messages/:id(\\d+)', name: 'messages.show', component: MessagesShow, meta: { middleware: ['auth'], title: 'Messages - KadoKadéo' } },
     { path: '/account', name: 'account', component: Account, meta: { middleware: ['auth'], title: 'Mon compte - KadoKadéo' } },

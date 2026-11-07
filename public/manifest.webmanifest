@@ -21,6 +21,12 @@
     { "src": "/screenshots/wide.webp", "sizes": "1280x720", "type": "image/webp", "form_factor": "wide", "label": "La liste des jeux" },
     { "src": "/screenshots/narrow.webp", "sizes": "824x1648", "type": "image/webp", "form_factor": "narrow", "label": "La liste des jeux" }
   ],
+  "share_target": {
+    "action": "/messages/new",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": { "title": "title", "text": "text", "url": "url" }
+  },
   "shortcuts": [
     { "name": "Jeu du jour", "url": "/daily", "icons": [{ "src": "/icons/icon-96.png", "sizes": "96x96", "type": "image/png" }] },
     { "name": "Tous les jeux", "url": "/games", "icons": [{ "src": "/icons/icon-96.png", "sizes": "96x96", "type": "image/png" }] },
