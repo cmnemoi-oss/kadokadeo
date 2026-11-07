@@ -8,6 +8,7 @@ const run = ref(null)
 
 fetchRun(runId).then((data) => {
   run.value = data.data
+  document.title = `Replay de ${data.data.user?.display_name} sur ${data.data.game.name} - KadoKadéo`
   goToLinkedComment()
 })
 

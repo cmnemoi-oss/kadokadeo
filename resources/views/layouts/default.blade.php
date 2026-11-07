@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <title>@yield('title', 'KadoKadéo')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Les jeux de KadoKado : le jeu du jour, les classements et les clans.">
+    <link rel="canonical" href="{{ url()->current() }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- the installed site (public/manifest.webmanifest, resources/js/composables/usePwa.js) --}}
     <link rel="manifest" href="/manifest.webmanifest">
