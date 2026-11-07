@@ -65,5 +65,6 @@ export function usePwa() {
     return true
   }
 
-  return { canInstall, install }
+  // (an installed app on iOS has no back button; the other systems give one)
+  return { canInstall, install, needsBackButton: navigator.standalone === true }
 }
