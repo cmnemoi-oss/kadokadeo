@@ -1,0 +1,19 @@
+public/manifest.webmanifest
+  s_602cc37617e161::t_85dddb60e2752b 27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "79810c630b1d6fda9379eaeb04ecaf8918ad153e",
+  "prompts": {},
+  "sessions": {
+    "s_602cc37617e161": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "94881066-61dc-43df-991f-7bb83c96d26e",
+        "model": "unknown"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
