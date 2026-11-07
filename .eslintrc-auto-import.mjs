@@ -122,6 +122,7 @@ export default {
     "usePeriodStore": true,
     "usePolling": true,
     "useProfile": true,
+    "usePwa": true,
     "useRealtimeStore": true,
     "useReplayClock": true,
     "useReplayComments": true,

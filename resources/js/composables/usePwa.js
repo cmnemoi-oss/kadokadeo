@@ -1,4 +1,22 @@
+import { computed, shallowRef } from 'vue'
+
+const installEvent = shallowRef(null)
+const installed = shallowRef(matchMedia('(display-mode: standalone)').matches || navigator.standalone === true)
+// (an iPhone or an iPad has no install prompt: the player does it from the Share menu of his browser)
+const needsManualInstall = /iphone|ipad|ipod/i.test(navigator.userAgent)
+  || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+
+// (before the first event of the browser: called by main.js, at load)
 export function registerPwa(router) {
+  addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault()
+    installEvent.value = event
+  })
+  addEventListener('appinstalled', () => {
+    installEvent.value = null
+    installed.value = true
+  })
+
   const { serviceWorker } = navigator
   if (!serviceWorker) {
     return
@@ -32,4 +50,20 @@ export function registerPwa(router) {
       return false
     }
   })
+}
+
+export function usePwa() {
+  const canInstall = computed(() => !installed.value && (installEvent.value !== null || needsManualInstall))
+
+  async function install() {
+    const event = installEvent.value
+    if (!event) {
+      return false
+    }
+    await event.prompt()
+    installEvent.value = null
+    return true
+  }
+
+  return { canInstall, install }
 }
