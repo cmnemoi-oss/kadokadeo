@@ -18,14 +18,14 @@
     { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "screenshots": [
-    { "src": "/screenshots/wide-games.webp", "sizes": "1280x800", "type": "image/webp", "form_factor": "wide", "label": "Plus de 70 jeux à débloquer" },
-    { "src": "/screenshots/wide-replay.webp", "sizes": "1280x800", "type": "image/webp", "form_factor": "wide", "label": "Les replays de chaque partie" },
-    { "src": "/screenshots/wide-profile.webp", "sizes": "1280x800", "type": "image/webp", "form_factor": "wide", "label": "Votre profil et vos étoiles" },
-    { "src": "/screenshots/wide-help.webp", "sizes": "1280x800", "type": "image/webp", "form_factor": "wide", "label": "Le guide du site" },
-    { "src": "/screenshots/narrow-games.webp", "sizes": "824x1648", "type": "image/webp", "form_factor": "narrow", "label": "Plus de 70 jeux à débloquer" },
-    { "src": "/screenshots/narrow-replay.webp", "sizes": "824x1648", "type": "image/webp", "form_factor": "narrow", "label": "Les replays de chaque partie" },
-    { "src": "/screenshots/narrow-profile.webp", "sizes": "824x1648", "type": "image/webp", "form_factor": "narrow", "label": "Votre profil et vos étoiles" },
-    { "src": "/screenshots/narrow-help.webp", "sizes": "824x1648", "type": "image/webp", "form_factor": "narrow", "label": "Le guide du site" }
+    { "src": "/screenshots/wide-games.webp", "sizes": "1280x779", "type": "image/webp", "form_factor": "wide", "label": "Plus de 70 jeux à débloquer" },
+    { "src": "/screenshots/wide-replay.webp", "sizes": "1280x779", "type": "image/webp", "form_factor": "wide", "label": "Les replays de chaque partie" },
+    { "src": "/screenshots/wide-profile.webp", "sizes": "1280x779", "type": "image/webp", "form_factor": "wide", "label": "Votre profil et vos étoiles" },
+    { "src": "/screenshots/wide-help.webp", "sizes": "1280x779", "type": "image/webp", "form_factor": "wide", "label": "Le guide du site" },
+    { "src": "/screenshots/narrow-games.webp", "sizes": "800x1512", "type": "image/webp", "form_factor": "narrow", "label": "Plus de 70 jeux à débloquer" },
+    { "src": "/screenshots/narrow-replay.webp", "sizes": "800x1512", "type": "image/webp", "form_factor": "narrow", "label": "Les replays de chaque partie" },
+    { "src": "/screenshots/narrow-profile.webp", "sizes": "800x1512", "type": "image/webp", "form_factor": "narrow", "label": "Votre profil et vos étoiles" },
+    { "src": "/screenshots/narrow-help.webp", "sizes": "800x1512", "type": "image/webp", "form_factor": "narrow", "label": "Le guide du site" }
   ],
   "share_target": {
     "action": "/messages/new",
