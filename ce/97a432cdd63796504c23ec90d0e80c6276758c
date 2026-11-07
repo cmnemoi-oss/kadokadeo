@@ -1,0 +1,29 @@
+resources/js/layouts/default.vue
+  s_602cc37617e161::t_ecff5be6df738a 17,58
+AGENTS.md
+  s_602cc37617e161::t_be310963a686ae 53
+resources/css/app.css
+  s_602cc37617e161::t_9c33fe6fd37237 212-213
+resources/js/components/nav/TopBar.vue
+  s_602cc37617e161::t_dfa7fba1c96a07 50
+resources/js/components/side/SidebarDrawer.vue
+  s_602cc37617e161::t_ff71e2f5dfe7a1 40
+resources/views/layouts/default.blade.php
+  s_602cc37617e161::t_3995ecdbcc0b62 7,18-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ce97a432cdd63796504c23ec90d0e80c6276758c",
+  "prompts": {},
+  "sessions": {
+    "s_602cc37617e161": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "94881066-61dc-43df-991f-7bb83c96d26e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
