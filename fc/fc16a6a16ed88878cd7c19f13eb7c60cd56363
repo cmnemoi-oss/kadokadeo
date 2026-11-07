@@ -1,0 +1,33 @@
+resources/js/components/KadoToasts.vue
+  s_602cc37617e161::t_23feaf870adce8 17,19
+resources/js/composables/helpers.js
+  s_602cc37617e161::t_2e72d8a4f4f815 49-51
+resources/js/pages/clans/forum/topic.vue
+  s_602cc37617e161::t_e5d34f6bfca0f7 37,41
+resources/js/pages/help.vue
+  s_602cc37617e161::t_bb9957ebfb3821 113
+.eslintrc-auto-import.mjs
+  s_602cc37617e161::t_cfc3901f563bdc 78
+AGENTS.md
+  s_602cc37617e161::t_2628b809ca02c9 53
+resources/js/components/side/SidebarDrawer.vue
+  s_602cc37617e161::t_6c1939ade1dac8 20,23,33,36
+resources/js/pages/runs/show.vue
+  s_602cc37617e161::t_8305d998d83c02 69,117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fcfc16a6a16ed88878cd7c19f13eb7c60cd56363",
+  "prompts": {},
+  "sessions": {
+    "s_602cc37617e161": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "94881066-61dc-43df-991f-7bb83c96d26e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
