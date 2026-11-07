@@ -1,0 +1,21 @@
+resources/js/components/nav/TopBar.vue
+  s_602cc37617e161::t_b60ee1fd2a75e4 10-11,53-59
+resources/js/composables/usePwa.js
+  s_602cc37617e161::t_f9776e95fac56f 68-69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0ca4f3de2d6efcfebe2d0f65c42f0cc296e14bbc",
+  "prompts": {},
+  "sessions": {
+    "s_602cc37617e161": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "94881066-61dc-43df-991f-7bb83c96d26e",
+        "model": "unknown"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
