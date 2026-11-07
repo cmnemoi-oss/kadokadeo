@@ -1,0 +1,35 @@
+resources/js/messages/draft.js
+  s_602cc37617e161::t_b815a2d9d5acca 1-15
+resources/js/messages/draft.test.mjs
+  s_602cc37617e161::t_ecf7bb11b74e71 1-34
+resources/js/pages/loginCallback.vue
+  s_602cc37617e161::t_60a96603c06177 8
+resources/js/pages/messages/index.vue
+  s_602cc37617e161::t_507fbd04ff8fa7 3,25-29,31-34
+resources/js/router/middlewares.js
+  s_602cc37617e161::t_91bd7d9fa68a60 7,15-17
+resources/js/stores/auth.js
+  s_602cc37617e161::t_f0cdd3e1e8ed2c 7-8,116-135,165-166
+AGENTS.md
+  s_602cc37617e161::t_9690f330a9bdf9 53
+public/manifest.webmanifest
+  s_602cc37617e161::t_c105a85b0e5979 24-29
+resources/js/router/index.js
+  s_602cc37617e161::t_e6d388444b5d1f 57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5170120a2eff740fdcd726b05fae2d721a87914b",
+  "prompts": {},
+  "sessions": {
+    "s_602cc37617e161": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "94881066-61dc-43df-991f-7bb83c96d26e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
