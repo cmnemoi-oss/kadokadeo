@@ -66,7 +66,7 @@ const goToLinkedComment = () => {
   }
   highlightId.value = id
   linkedFrame = comment.frame
-  nextTick(() => document.getElementById(`comment-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }))
+  nextTick(() => document.getElementById(`comment-${id}`)?.scrollIntoView({ behavior: scrollBehavior(), block: 'center' }))
   setTimeout(() => {
     highlightId.value = null
   }, 5000)
@@ -114,7 +114,7 @@ useReplayComments({
 
 const seek = (frame) => {
   clock.seek(frame)
-  gameBox.value?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+  gameBox.value?.scrollIntoView({ behavior: scrollBehavior(), block: 'nearest' })
 }
 
 // VIEW: counted once the replay was really played long enough (not paused, the tab visible), once by page

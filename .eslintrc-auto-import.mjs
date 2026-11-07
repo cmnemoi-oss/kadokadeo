@@ -75,6 +75,7 @@ export default {
     "refetchSoon": true,
     "registerPwa": true,
     "resolveComponent": true,
+    "scrollBehavior": true,
     "shallowReactive": true,
     "shallowReadonly": true,
     "shallowRef": true,

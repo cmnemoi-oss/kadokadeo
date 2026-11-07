@@ -17,10 +17,10 @@ watch(() => route.fullPath, () => {
     <Dialog class="relative z-50 lg:hidden" @close="open = false">
       <TransitionChild
         as="template"
-        enter="transition-opacity duration-200"
+        enter="transition-opacity duration-200 motion-reduce:transition-none"
         enter-from="opacity-0"
         enter-to="opacity-100"
-        leave="transition-opacity duration-200"
+        leave="transition-opacity duration-200 motion-reduce:transition-none"
         leave-from="opacity-100"
         leave-to="opacity-0"
       >
@@ -30,10 +30,10 @@ watch(() => route.fullPath, () => {
       <div class="fixed inset-y-0 right-0 flex max-w-full">
         <TransitionChild
           as="template"
-          enter="transition-transform duration-200"
+          enter="transition-transform duration-200 motion-reduce:transition-none"
           enter-from="translate-x-full"
           enter-to="translate-x-0"
-          leave="transition-transform duration-200"
+          leave="transition-transform duration-200 motion-reduce:transition-none"
           leave-from="translate-x-0"
           leave-to="translate-x-full"
         >
