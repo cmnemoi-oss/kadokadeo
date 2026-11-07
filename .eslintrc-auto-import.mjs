@@ -79,6 +79,7 @@ export default {
     "shallowReactive": true,
     "shallowReadonly": true,
     "shallowRef": true,
+    "shareLink": true,
     "toRaw": true,
     "toRef": true,
     "toRefs": true,

@@ -12,6 +12,12 @@ fetchRun(runId).then((data) => {
   goToLinkedComment()
 })
 
+const linkCopied = ref(false)
+const share = async() => {
+  const shared = await shareLink({ title: document.title, url: `${location.origin}/runs/${runId}` })
+  linkCopied.value = shared === 'copied'
+}
+
 // the replay is played by the version of the game it was recorded with (run.gamedata)
 const replayGame = computed(() => run.value && { ...run.value.game, gamedata: run.value.gamedata ?? run.value.game.gamedata })
 
@@ -161,6 +167,9 @@ watch(clock.frame, (frame, previous) => {
     <KadoSectionTitle>Date: {{ dayjs(run.completed_at).format('DD/MM/YYYY HH:mm') }}</KadoSectionTitle>
     <KadoSectionTitle>Temps: {{ formatTime(run.play_time_seconds) }}</KadoSectionTitle>
     <KadoSectionTitle>Vues: {{ run.views_count }} · Commentaires: {{ run.comments_count }}</KadoSectionTitle>
+    <p class="mt-2 text-center">
+      <FormButton @click="share">{{ linkCopied ? 'Lien copié' : 'Partager ce replay' }}</FormButton>
+    </p>
 
     <div ref="gameBox" class="max-w-full w-fit max-h-full h-fit m-auto overflow-y-auto pt-5">
       <div class="flex flex-col">

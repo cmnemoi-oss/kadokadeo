@@ -52,6 +52,22 @@ export function registerPwa(router) {
   })
 }
 
+// the sheet of the system, else the link copied; a sheet closed by the player is not an error
+export async function shareLink(data) {
+  if (!navigator.share) {
+    await navigator.clipboard.writeText(data.url)
+    return 'copied'
+  }
+  try {
+    await navigator.share(data)
+  } catch(error) {
+    if (error.name !== 'AbortError') {
+      throw error
+    }
+  }
+  return 'shared'
+}
+
 export function usePwa() {
   const canInstall = computed(() => !installed.value && (installEvent.value !== null || needsManualInstall))
 
