@@ -1,0 +1,25 @@
+.env.example
+  s_602cc37617e161::t_13f605f54b71d3 84-85
+AGENTS.md
+  s_602cc37617e161::t_88841e9b35a119 53
+resources/js/composables/usePwa.js
+  s_602cc37617e161::t_3e4be83a40a246 24-25
+vite.config.js
+  s_602cc37617e161::t_a31b087566aad7 18-21,24-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e67ae4b470681da9405a707b347f5cfa6a2a7185",
+  "prompts": {},
+  "sessions": {
+    "s_602cc37617e161": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "94881066-61dc-43df-991f-7bb83c96d26e",
+        "model": "unknown"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
