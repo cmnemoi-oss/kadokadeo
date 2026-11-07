@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs'
+import { readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath, URL } from 'node:url'
 
 import tailwindcss from '@tailwindcss/vite'
@@ -15,8 +15,18 @@ import svgLoader from 'vite-svg-loader'
 // the version of the site (package.json), shown in the bar of the top (nav/TopBar.vue)
 const { version } = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8'))
 
+// the service worker must be at the root of the site; a new content at each build: the browsers see a new version
+const serviceWorker = {
+  name: 'kado-service-worker',
+  apply: 'build',
+  closeBundle() {
+    writeFileSync('public/sw.js', `// build ${Date.now()}\n${readFileSync('resources/js/sw.js', 'utf8')}`)
+  },
+}
+
 export default defineConfig({
   plugins: [
+    serviceWorker,
     laravel({
       input: ['resources/css/app.css', 'resources/js/main.js', 'resources/js/replay-player.js', 'resources/js/admin/marktwin.js'],
       refresh: true,

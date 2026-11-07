@@ -73,6 +73,7 @@ export default {
     "readonly": true,
     "ref": true,
     "refetchSoon": true,
+    "registerPwa": true,
     "resolveComponent": true,
     "shallowReactive": true,
     "shallowReadonly": true,
