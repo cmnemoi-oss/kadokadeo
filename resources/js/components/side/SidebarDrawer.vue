@@ -37,7 +37,7 @@ watch(() => route.fullPath, () => {
           leave-from="translate-x-0"
           leave-to="translate-x-full"
         >
-          <DialogPanel class="w-[240px] h-full overflow-y-auto bg-kado-blue-100 border-l-2 border-solid border-kado-teal-500 px-4 pb-6 text-xs">
+          <DialogPanel class="w-[240px] h-full overflow-y-auto bg-kado-blue-100 border-l-2 border-solid border-kado-teal-500 px-4 pt-[env(safe-area-inset-top)] pb-[max(1.5rem,env(safe-area-inset-bottom))] text-xs">
             <div class="flex justify-end pt-2">
               <button type="button"
                       class="text-2xl leading-none text-kado-teal-500 cursor-pointer"

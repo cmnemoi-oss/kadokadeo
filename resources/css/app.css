@@ -209,8 +209,8 @@
   --color-etwin-orange: #fe7d00;
   --color-etwin-blue: #0288d1;
   --color-etwin-green: #2e7d32;
-  /* its height: the header of the page (the backgrounds of the body) starts under it */
-  --spacing-etwin-bar: 2.5rem;
+  /* its height: the header of the page (the backgrounds of the body) starts under it; with the status bar of a phone */
+  --spacing-etwin-bar: calc(2.5rem + env(safe-area-inset-top));
 
   /* the forum of Eternaltwin in the look of the forum of Twinoid (data.twinoid.com/css/bar.css), and the dark panels
      of the clans (#1d2024 / #3d4045 in the original stylesheet) */
