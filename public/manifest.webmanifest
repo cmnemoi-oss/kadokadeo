@@ -24,6 +24,7 @@
     { "src": "/screenshots/wide-help.webp", "sizes": "1280x779", "type": "image/webp", "form_factor": "wide", "label": "Le guide du site" },
     { "src": "/screenshots/narrow-games.webp", "sizes": "800x1512", "type": "image/webp", "form_factor": "narrow", "label": "Plus de 70 jeux à débloquer" },
     { "src": "/screenshots/narrow-replay.webp", "sizes": "800x1512", "type": "image/webp", "form_factor": "narrow", "label": "Les replays de chaque partie" },
+    { "src": "/screenshots/narrow-records.webp", "sizes": "856x1400", "type": "image/webp", "form_factor": "narrow", "label": "Les records du site" },
     { "src": "/screenshots/narrow-profile.webp", "sizes": "800x1512", "type": "image/webp", "form_factor": "narrow", "label": "Votre profil et vos étoiles" },
     { "src": "/screenshots/narrow-help.webp", "sizes": "800x1512", "type": "image/webp", "form_factor": "narrow", "label": "Le guide du site" }
   ],
