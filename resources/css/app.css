@@ -226,6 +226,18 @@
     line-height: unset;
   }
 
+  html {
+    accent-color: var(--color-kado-blue-700);
+  }
+
+  /* the installed site: no pull to refresh by accident, during a game */
+  @media (display-mode: standalone) {
+    html,
+    body {
+      overscroll-behavior-y: contain;
+    }
+  }
+
   body {
     display: flex;
     flex-wrap: wrap;

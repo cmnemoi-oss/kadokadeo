@@ -47,7 +47,7 @@ onUnmounted(() => clearInterval(clock))
 </script>
 
 <template>
-  <div class="sticky top-0 z-40 flex h-etwin-bar shrink-0 items-center justify-between gap-2 bg-etwin-bar px-2 pt-[calc(0.25rem+env(safe-area-inset-top))] pb-1 text-etwin-text shadow-sm">
+  <div class="sticky top-0 z-40 flex h-etwin-bar shrink-0 items-center justify-between gap-2 bg-etwin-bar px-2 pt-[calc(0.25rem+env(safe-area-inset-top))] pb-1 text-etwin-text shadow-sm select-none">
     <nav class="flex h-8 min-w-0 items-center gap-2 max-md:gap-1" aria-label="Les jeux d'Eternaltwin">
       <!-- on a phone: the 4 first ones -->
       <a v-for="(game, index) in games"

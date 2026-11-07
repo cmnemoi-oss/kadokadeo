@@ -26,7 +26,7 @@ const menu = [
   { label: 'Discord', href: 'https://discord.gg/cqasFsD', icon: 'bg-[url(/gfx/menuIconForum.gif)] bg-[position:0_1px]' },
   { label: 'Aide', to: { name: 'help' }, icon: 'bg-[url(/gfx/menuIconHelp.gif)] bg-[position:-3px_0]' },
 ]
-const menuLinkClasses = 'my-px block w-full bg-no-repeat pl-6.25 hover:pl-6.75 hover:no-underline'
+const menuLinkClasses = 'my-px block select-none w-full bg-no-repeat pl-6.25 hover:pl-6.75 hover:no-underline'
 </script>
 
 <template>
