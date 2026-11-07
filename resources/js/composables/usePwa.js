@@ -21,8 +21,8 @@ export function registerPwa(router) {
   if (!serviceWorker) {
     return
   }
-  if (!import.meta.env.PROD) {
-    // (the dev server needs the network: no worker left by a production build tried on this address)
+  if (!import.meta.env.PROD && import.meta.env.VITE_PWA_DEV !== 'true') {
+    // (no worker left by a production build, or VITE_PWA_DEV, tried on this address)
     serviceWorker.getRegistrations().then((registrations) => registrations.forEach((registration) => registration.unregister()))
     return
   }
