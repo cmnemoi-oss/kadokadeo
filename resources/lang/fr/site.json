@@ -13,5 +13,82 @@
     "auto": "Automatique",
     "fr": "Français",
     "en": "English (beta)"
+  },
+  "common": {
+    "please_wait": "Veuillez patienter...",
+    "close": "Fermer",
+    "site_name": "KadoKadéo",
+    "menu": "Menu",
+    "error_with": "Error: {error}",
+    "delete": "Supprimer"
+  },
+  "site_records": {
+    "title": "Records du site",
+    "loading": "Chargement des records...",
+    "game": "Nom du jeu",
+    "record": "Record du site",
+    "player": "Joueur"
+  },
+  "achievement_banner": {
+    "unlocked": "Succès obtenu !",
+    "level": "Niveau {level}"
+  },
+  "pending_runs": {
+    "confirm_delete": "Supprimer définitivement la partie de {game} ({score} points) ?",
+    "not_sent": "Une partie n'a pas pu être envoyée au serveur. | {count} parties n'ont pas pu être envoyées au serveur.",
+    "detail": " : {score} points, le {date}",
+    "error": "Erreur : {error}",
+    "unreachable": "serveur injoignable",
+    "attempts": "({count} essai) | ({count} essais)",
+    "sending": "Envoi en cours...",
+    "retry": "Réessayer",
+    "hide_details": "Masquer les détails",
+    "show_details": "Voir les détails"
+  },
+  "editor": {
+    "nothing_to_preview": "Rien à prévisualiser.",
+    "syntax": "**gras** _italique_ __souligné__ ~~barré~~ {'|'}{'|'}spoiler{'|'}{'|'} [lien](https://…) [quote=pseudo]…[/quote]",
+    "edit": "Modifier",
+    "preview": "Aperçu"
+  },
+  "forum": {
+    "topics": "{count} sujet(s)",
+    "unread": "{count} non lu(s)",
+    "not_open": "Le forum n'est pas encore ouvert.",
+    "new_topic": "Nouveau sujet",
+    "topic_title": "Titre du sujet",
+    "create_topic": "Créer le sujet",
+    "locked_short": "Verrouillé",
+    "locked_title": "Sujet verrouillé",
+    "reply": "Répondre",
+    "locked": "Ce sujet est verrouillé."
+  },
+  "notifications": {
+    "confirm_delete_all": "Supprimer toutes vos notifications ?",
+    "none": "Vous n'avez aucune notification.",
+    "excerpt": "« {excerpt} »",
+    "older": "Plus anciennes",
+    "delete_all": "Tout supprimer",
+    "retention": "Les notifications sont supprimées automatiquement après deux mois.",
+    "a_player": "Un joueur",
+    "of_game": " de {game}",
+    "run_comment": "{actor} a commenté votre replay{ofGame}.",
+    "comment_reply": "{actor} a répondu à votre commentaire sur le replay{ofGame}.",
+    "comment_likes_others": "{actor} et {count} autre ont aimé votre commentaire sur le replay{ofGame}. | {actor} et {count} autres ont aimé votre commentaire sur le replay{ofGame}.",
+    "comment_like": "{actor} a aimé votre commentaire sur le replay{ofGame}.",
+    "clan_application": "{actor} demande à rejoindre votre clan {clan}.",
+    "clan_accepted": "Vous avez été accepté dans le clan {clan} !",
+    "clan_refused": "Votre candidature au clan {clan} a été refusée : vos points Kado vous ont été rendus.",
+    "new": "Nouvelle notification."
+  },
+  "messages": {
+    "new_message_toast": "Nouveau message"
+  },
+  "leagues": {
+    "beginner": "Niveau débutant",
+    "bronze": "Niveau bronze",
+    "silver": "Niveau argent",
+    "gold": "Niveau or",
+    "paradise": "Niveau paradis"
   }
 }

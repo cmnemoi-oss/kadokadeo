@@ -20,6 +20,19 @@ const NO_USE_API = {
 const FILES_WITH_TRANSLATED_TEXTS = [
   'resources/js/pages/login.vue',
   'resources/js/components/account/LanguageSelector.vue',
+  'resources/js/pages/loginCallback.vue',
+  'resources/js/pages/bestsScores.vue',
+  'resources/js/pages/forum/*.vue',
+  'resources/js/layouts/default.vue',
+  'resources/js/components/KadoToasts.vue',
+  'resources/js/components/KadoAchievementBanner.vue',
+  'resources/js/components/message/PendingRuns.vue',
+  'resources/js/components/marktwin/Editor.vue',
+  'resources/js/components/notifications/List.vue',
+]
+const SCRIPTS_WITH_TRANSLATED_TEXTS = [
+  'resources/js/stores/messages.js',
+  'resources/js/stores/league.js',
 ]
 const NO_ACCENTED_TEXT = [
   { selector: 'Literal[value=/[À-ÿ]/]', message: 'A text goes through t() and resources/lang.' },
@@ -106,6 +119,14 @@ export default defineConfig([
     },
   },
 
+  // (a store or a composable can call useApi)
+  {
+    files: SCRIPTS_WITH_TRANSLATED_TEXTS,
+    rules: {
+      'no-restricted-syntax': ['error', ...NO_ACCENTED_TEXT],
+    },
+  },
+
   // (a block replaces the options of a rule: NO_USE_API has to stay here)
   {
     files: FILES_WITH_TRANSLATED_TEXTS,
@@ -113,7 +134,7 @@ export default defineConfig([
       'no-restricted-syntax': ['error', NO_USE_API, ...NO_ACCENTED_TEXT],
       'vue/no-restricted-syntax': ['error', ...NO_ACCENTED_TEXT],
       'vue/no-bare-strings-in-template': ['error', {
-        allowlist: ['/^[0-9]+$/', '(', ')', ',', '.', '&', '+', '-', '=', '*', '/', '#', '%', '!', '?', ':', '[', ']', '{', '}', '<', '>', '•', '·', '—', ' ', '|'],
+        allowlist: ['/^[0-9]+$/', '(', ')', ',', '.', '&', '+', '-', '=', '*', '/', '#', '%', '!', '?', ':', '[', ']', '{', '}', '<', '>', '•', '·', '—', '×', ' ', '|'],
         attributes: {
           '/.+/': ['title', 'label', 'placeholder', 'aria-label', 'aria-placeholder', 'aria-roledescription', 'aria-valuetext'],
           img: ['alt'],

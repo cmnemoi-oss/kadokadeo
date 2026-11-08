@@ -46,6 +46,14 @@ test('an accented comment is accepted', () => isAccepted(page({ script: '// Déj
 
 test('a text outside the migrated files is accepted', () => isAccepted(page({ template: '<p>Bonjour</p>' }), OTHER_FILE))
 
+test('a migrated store is refused an accented text, but can call useApi', async() => {
+  const filePath = 'resources/js/stores/messages.js'
+
+  assert.notDeepEqual(await textRuleFindings("toast('Déjà pris')", filePath), [])
+  const [result] = await eslint.lintText('useApi()', { filePath })
+  assert.ok(!result.messages.some((message) => message.message.includes('composable')), 'a store can call useApi')
+})
+
 test('useApi stays refused in a migrated file', async() => {
   const [result] = await eslint.lintText(page({ script: 'useApi()' }), { filePath: MIGRATED_FILE })
 

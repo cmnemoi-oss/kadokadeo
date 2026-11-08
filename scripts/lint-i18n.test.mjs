@@ -213,6 +213,10 @@ test('a key that is not a literal is rejected', () => {
   codeIsRejected('<i18n-t :keypath="key" />')
 })
 
+test('the function t itself is not a use of a key', () => {
+  codeIsAccepted('export function t(...args) {}')
+})
+
 test('the words that only end with a t are not translations', () => {
   codeIsAccepted('list.at(0); wait(delay); format(value)')
 })
