@@ -468,5 +468,173 @@
     "value": "Valeur",
     "next_step": "Prochain palier",
     "game_ranking": "Classement de ce jeu"
+  },
+  "help": {
+    "title": "Aide",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "overview": "Présentation",
+    "kado_alt": "Kado",
+    "kado_points": "points Kado",
+    "sections": {
+      "welcome": "Bienvenue",
+      "periods": "Les périodes",
+      "daily": "Le jeu du jour",
+      "stars": "Les étoiles",
+      "levels": "Les niveaux",
+      "clans": "Les clans",
+      "attacks": "Les attaques",
+      "attacks_short": "Attaques",
+      "defenses": "Les défenses",
+      "defenses_short": "Défenses",
+      "roles": "Les rôles",
+      "roles_short": "Rôles",
+      "missions": "Les missions",
+      "missions_short": "Missions",
+      "options": "Les options",
+      "options_short": "Options",
+      "clan_ranking": "Le classement des clans",
+      "clan_ranking_short": "Classement des clans",
+      "v1_ranking": "Le classement V1",
+      "account": "Mon compte",
+      "questions": "Questions"
+    },
+    "welcome": {
+      "intro": "Bienvenue sur {site}, le retour de KadoKado par le projet Eternaltwin ! Retrouvez les jeux de Motion-Twin, battez vos records et grimpez dans les niveaux de chaque jeu.",
+      "contract": "Chaque jour, vous disposez d'un nombre de parties à jouer sur les jeux que vous préférez. Le jeu du jour vous propose en plus un contrat : un score à battre pour remporter des {points} {icon}.",
+      "navigation": "Utilisez ce menu ou le bouton « Suivant » pour découvrir le reste du site !",
+      "navigation_with_clans": "Rejoignez un clan pour jouer en équipe, et utilisez ce menu ou le bouton « Suivant » pour découvrir le reste du site !"
+    },
+    "periods": {
+      "length": "Une période KadoKadéo se déroule sur deux semaines, soit {days}. Le Kalendrier affiché en haut à droite du site indique la période actuelle ainsi que le jour actuel.",
+      "days": "14 jours",
+      "close": "Quand une période se termine, les classements sont remis à zéro : les meilleurs joueurs de chaque niveau montent au niveau supérieur et remportent des points Kado. Le classement du jeu du jour est lui aussi récompensé à ce moment-là.",
+      "close_with_clans": "Quand une période se termine, les classements sont remis à zéro : les meilleurs joueurs de chaque niveau montent au niveau supérieur et remportent des points Kado, et le tournoi des clans recommence. Le classement du jeu du jour est lui aussi récompensé à ce moment-là."
+    },
+    "daily": {
+      "draw": "Chaque jour à minuit (UTC), un jeu est tiré au sort. La partie est {same}, et vous n'avez droit qu'à {attempt}. Elle vous propose aussi un contrat : un score à battre pour remporter des points Kado {icon}.",
+      "same": "identique pour tous les joueurs",
+      "attempt": "une seule tentative",
+      "top10": "Le top 10 de chaque jour gagne des {ranking_points} : 10 points pour le 1er, 9 pour le 2e, et ainsi de suite jusqu'à 1 point pour le 10e. Ils s'additionnent jour après jour dans le classement de la période, visible à côté du jeu.",
+      "ranking_points": "points de classement",
+      "reward": "A la fin de la période, {every_player} reçoit {kado} {icon} par point de classement. Le détail de votre récompense apparaît dans l'onglet « Dernière période » de votre profil.",
+      "every_player": "chaque joueur ayant au moins un point"
+    },
+    "stars": {
+      "intro": "Si vous faites un très bon score à un jeu, vous remportez une étoile. Il y a trois niveaux d'étoile pour chaque jeu :",
+      "green": "étoile verte",
+      "orange": "étoile orange",
+      "red": "étoile rouge",
+      "green_with_article": "l'étoile verte",
+      "orange_with_article": "l'étoile orange",
+      "red_with_article": "l'étoile rouge",
+      "outro": "L'étoile que vous possédez est indiquée sur la boîte de chaque jeu. Les étoiles comptent aussi pour passer au niveau supérieur : il faudra une étoile minimum selon le niveau où vous vous trouvez."
+    },
+    "levels": {
+      "intro": "A chaque passage de niveau, vous obtenez des points Kado supplémentaires, qui augmentent au fur et à mesure que votre niveau progresse :",
+      "level": "Niveau",
+      "qualified": "Qualifiés",
+      "star": "Etoile",
+      "kado_points": "Points Kado",
+      "ratio": "{ratio}% (max {max})",
+      "alone": "Si un joueur est seul dans son niveau, il ne pourra monter que s'il y a des joueurs dans le niveau suivant. Sinon, il faudra au moins 2 joueurs pour prétendre à monter."
+    },
+    "clans": {
+      "intro": "Un Clan est un groupe de joueurs (maximum {max}) qui se rassemblent pour combattre ensemble contre d'autres clans.",
+      "join": "Vous pouvez soit rejoindre un Clan existant en envoyant votre candidature depuis sa page, soit créer votre propre Clan à partir de la rubrique {link}.",
+      "join_link": "Clans",
+      "prices": "Créer un Clan coûte {creation} et chaque candidature {application}. Vous pouvez postuler dans plusieurs clans à la fois : dès qu'un clan vous accepte, vos autres candidatures sont retirées et remboursées. Une candidature refusée ou que vous retirez vous est aussi remboursée.",
+      "price": "{points} points Kado",
+      "locked": "Un joueur accepté dans un Clan ne peut pas le quitter ni en être exclu pendant la période où il l'a rejoint.",
+      "leaders": "Le Clan est dirigé par son {chief}, qui peut nommer des {right_hands} : ils ont tous les droits du chef (candidatures, exclusions, options, rôles), sauf dissoudre le Clan et nommer un nouveau chef.",
+      "chief": "chef",
+      "right_hands": "bras droits",
+      "two_rankings": "Chaque Clan a deux scores et deux positions : une dans le classement des attaques et une dans le classement des missions. Vous pouvez participer à l'un ou l'autre de ces classements, ou aux deux !",
+      "player_ranking": "Dans le Clan, les joueurs ont aussi leur classement : 1 point par étape de mission réussie, et les points de chaque attaque et de chaque défense réussies."
+    },
+    "attacks": {
+      "icon_alt": "Attaque",
+      "how": "{icon} Pour gagner des points, un Clan doit attaquer un autre Clan : allez sur la page d'un Clan adverse, cliquez sur « Attaquer ce clan », choisissez un jeu et effectuez une partie.",
+      "repel": "Votre score devient une attaque. Pour la repousser, le Clan adverse devra faire un score supérieur au vôtre. Une attaque repoussée est annulée, et votre Clan ne perd rien.",
+      "reward": "Si au bout de {hours} l'attaque n'a pas été repoussée, votre Clan remporte de 1 à {points} et le Clan adverse perd autant (jamais en dessous de zéro). Contre un Clan qui a autant de points que le vôtre ou plus, l'attaque rapporte {max} points ; c'est un point de moins par tranche de {palier} points qu'il a de moins que vous. Le nombre de points est affiché avant d'attaquer. Attaquez des clans au score proche du vôtre : ceux qui ont plus de {range} points d'écart avec vous sont protégés de vos attaques.",
+      "hours": "{hours} heures",
+      "points": "{points} points",
+      "upgrade": "Chaque joueur peut avoir une attaque en cours à la fois. Pour l'améliorer, cliquez sur « Améliorer » dans l'onglet Statut et rejouez sur le même jeu : le nouveau score ne remplace celui de l'attaque que s'il est meilleur, et le Clan adverse a de nouveau {hours} heures pour le battre.",
+      "closing": "Une attaque doit pouvoir se terminer avant la fin de la période : les attaques et les améliorations ferment {before_end}. Les défenses restent possibles jusqu'au bout.",
+      "before_end": "{hours} heures avant la fin de la période",
+      "games": "Chaque jour, vous avez {free} pour attaquer et défendre (la gemme verte dans le menu du Clan), à part de vos parties normales. Quand elles sont jouées, vous pouvez attaquer et défendre avec des {clan_games}, achetées avec vos points Kado ({packs}). Vous pouvez les garder pour vous ou les donner à votre Clan : le chef et ses bras droits les distribuent ensuite aux membres. Les parties gratuites du jour ne peuvent pas être données.",
+      "free": "{games} parties gratuites",
+      "clan_games": "parties de clan",
+      "pack": "{games} pour {price} points"
+    },
+    "defenses": {
+      "icon_alt": "Défense",
+      "where": "{icon} Les attaques lancées par votre Clan et celles menées contre lui sont indiquées dans l'onglet Statut de votre clan. Cliquez sur « Défendre » et battez le score de l'attaque sur le même jeu.",
+      "blocked": "Sachez que tant que vous avez une attaque en cours, vous ne pouvez pas défendre ! Il faudra donc coordonner les membres du Clan entre attaquants et défenseurs.",
+      "defender": "Un {defender} peut défendre même quand il a une attaque en cours : voyez {link}.",
+      "defender_link": "les rôles",
+      "reserve": "Vous battrez le score d'une attaque plus tard ? Cliquez sur « Réserver » dans l'onglet Statut pour prévenir votre Clan. N'importe quel membre peut prendre la réservation à son tour : c'est seulement une information.",
+      "progress": "Pour progresser dans le classement, il faudra à la fois remporter des attaques et défendre efficacement contre les clans ennemis."
+    },
+    "roles": {
+      "intro": "Pour les attaques et les défenses, chaque joueur du Clan a un rôle. Sans siège, c'est un simple {member}. Le chef et ses bras droits peuvent donner les sièges d'{attacker} et de {defender} depuis « Gérer le clan ».",
+      "role": "Rôle",
+      "attacks_at_once": "Attaques en même temps",
+      "defend_while_attacking": "Défendre avec une attaque en cours",
+      "seats": "Sièges",
+      "attacker": "Attaquant",
+      "defender": "Défenseur",
+      "member": "Membre",
+      "yes": "Oui",
+      "no": "Non",
+      "seats_share": "{percent} % des membres",
+      "seats_others": "Les autres",
+      "example": "Le nombre de sièges dépend du nombre de membres, arrondi en dessous, avec au moins un siège de chaque rôle. Par exemple, un Clan de {max} joueurs a {attackers} sièges d'Attaquant et {defenders} de Défenseur ; un Clan de 4 joueurs en a un de chaque.",
+      "locked": "Attention, un rôle donné est {locked_until} : il ne peut plus être changé ni retiré avant la période suivante. Choisissez bien vos Attaquants et vos Défenseurs ! Les rôles de chacun sont indiqués dans l'onglet Membres.",
+      "locked_until": "bloqué jusqu'à la fin de la période"
+    },
+    "missions": {
+      "time": "Votre Clan reçoit des missions : plusieurs étapes, chacune étant un score à atteindre sur un jeu. Vous avez {hours} pour toutes les réussir. Chacun peut faire les étapes sur les jeux où il est le meilleur, et les parties des missions sont {free} !",
+      "time_decreasing": "Votre Clan reçoit des missions : plusieurs étapes, chacune étant un score à atteindre sur un jeu. Vous avez {hours} pour toutes les réussir lors de la première mission de la période, puis {less} de moins à chaque mission réussie (au moins {min}). Chacun peut faire les étapes sur les jeux où il est le meilleur, et les parties des missions sont {free} !",
+      "hours": "{hours} heures",
+      "free": "gratuites et illimitées",
+      "reserve": "Comme pour les défenses, chacun peut « Réserver » une étape pour prévenir le Clan qu'il s'en occupe.",
+      "steps": "Plus votre Clan a de membres, plus les missions ont d'étapes : {alone} pour un joueur seul, jusqu'à {full} pour {max} joueurs. Le score à atteindre augmente avec les missions, jusqu'à dépasser l'étoile rouge. Chaque mission mélange des étapes de toutes les difficultés, jusqu'à l'étoile rouge et au-delà, et garde des étapes plus faciles (dès la moitié de l'étoile verte, un peu plus dures à chaque mission), pour que chacun puisse participer.",
+      "reward": "Une mission réussie rapporte {points} (un point de moins toutes les {every} missions, au moins {min}) et ouvre la mission suivante. Si le temps est écoulé, votre Clan perd un point par étape non réussie, moins une, et reçoit une nouvelle mission. Combien de missions votre Clan réussira-t-il ?",
+      "points": "{points} points"
+    },
+    "options": {
+      "intro": "Chaque mission réussie a {chance} % de chances de lui faire gagner une option. C'est le chef de clan ou un bras droit qui les utilise. Chaque Jeu caca et chaque Jeu cool ajoute un jeu à la liste des jeux caca ou des jeux cool du Clan ; un jeu ne peut être que dans une seule liste. S'il y a plus de jeux cool que d'étapes, la mission en prend une partie au hasard. Elles sont remises à zéro à la fin de la période.",
+      "intro_with_starting": "Au début de chaque période, votre Clan reçoit les options suivantes : {bonuses}. Chaque mission réussie a {chance} % de chances de lui faire gagner une option. C'est le chef de clan ou un bras droit qui les utilise. Chaque Jeu caca et chaque Jeu cool ajoute un jeu à la liste des jeux caca ou des jeux cool du Clan ; un jeu ne peut être que dans une seule liste. S'il y a plus de jeux cool que d'étapes, la mission en prend une partie au hasard. Elles sont remises à zéro à la fin de la période.",
+      "last_bonus": "{bonuses} et {last}",
+      "bonus": "{label} : {description}"
+    },
+    "clan_ranking": {
+      "intro": "Le tournoi des clans dure une période. A la fin, les clans les mieux classés de chaque classement remportent des points Kado, répartis à parts égales entre leurs membres. « L'union fait la force » !",
+      "war": "Classement des attaques",
+      "missions": "Classement des missions",
+      "range": "{from} à {to}"
+    },
+    "v1_ranking": {
+      "intro": "Chaque période, la compétition du classement V1 a lieu. Il s'agit d'un classement dans lequel les 12 meilleurs scores de chaque joueur sont additionnés pour atteindre un maximum de 18.000 points",
+      "scale": "Les scores de chaque jeu sont convertis dans une échelle allant de 0 à 1500 selon les critères suivants : ",
+      "score_reached": "Score atteint",
+      "v1_points": "Nombre de points V1",
+      "green_star": "Etoile verte",
+      "orange_star": "Etoile orange",
+      "red_star": "Etoile rouge",
+      "v1_score": "Score V1"
+    },
+    "account": {
+      "look": "Dans {link}, vous pouvez changer l'apparence du site.",
+      "look_link": "Mon compte",
+      "karbon": "Le thème {theme} s'achète une seule fois avec vos points Kado : vous pourrez ensuite passer d'un thème à l'autre quand vous le voulez.",
+      "karbon_theme": "Karbon"
+    },
+    "questions": {
+      "other": "Vous avez d'autres questions ? Les joueurs de KadoKadéo et l'équipe Eternaltwin vous répondent sur le {discord}.",
+      "discord": "Discord KadoKadéo",
+      "enjoy": "Bon jeu sur KadoKadéo !"
+    }
   }
 }
