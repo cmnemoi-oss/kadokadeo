@@ -54,11 +54,11 @@ export function clanToast(event) {
   const game = event.game?.name
   switch (event.kind) {
     case 'defense_repelled':
-      return { title: 'Défense réussie !', text: `${player} a réussi la défense sur ${game} (${formatScore(event.score)})`, to: { name: 'clans.status', params: { id: event.clan_id } } }
+      return { title: t('notifications.defense_title'), text: t('notifications.defense_text', { player, game, score: formatScore(event.score) }), to: { name: 'clans.status', params: { id: event.clan_id } } }
     case 'step_completed':
-      return { title: 'Étape réussie !', text: `${player} a réussi l'étape ${game} (${formatScore(event.score)})`, to: { name: 'clans.missions', params: { id: event.clan_id } } }
+      return { title: t('notifications.step_title'), text: t('notifications.step_text', { player, game, score: formatScore(event.score) }), to: { name: 'clans.missions', params: { id: event.clan_id } } }
     case 'mission_available':
-      return { title: 'Clan', text: 'Nouvelle mission disponible', to: { name: 'clans.missions', params: { id: event.clan_id } } }
+      return { title: t('notifications.clan_toast_title'), text: t('notifications.mission_text'), to: { name: 'clans.missions', params: { id: event.clan_id } } }
     default:
       return null
   }
