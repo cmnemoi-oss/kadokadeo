@@ -1,0 +1,30 @@
+resources/js/i18n/index.spec.js
+  s_bdee25dbb283eb::t_67407d4a829dce 1,3-4,27-50
+  s_bdee25dbb283eb::t_1748cb7debb494 51
+scripts/lint-i18n.mjs
+  s_bdee25dbb283eb::t_b9ebd40f0d76a5 99
+scripts/lint-i18n.test.mjs
+  s_bdee25dbb283eb::t_adf10af725d2ca 5
+  s_bdee25dbb283eb::t_2244acf97b7433 17-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e59e9ab65c33a299db13a1f173491af2aae51ea1",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
