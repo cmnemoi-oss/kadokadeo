@@ -1,0 +1,43 @@
+scripts/lint-i18n.mjs
+  s_bdee25dbb283eb::t_ab79297de555cc 85
+  s_bdee25dbb283eb::t_8f9343fe30d770 12,82-84,86-115,192-199,202,204-205
+config/app.php
+  s_bdee25dbb283eb::t_8f9343fe30d770 81,83
+app/Support/LocaleResolver.php
+  s_bdee25dbb283eb::t_8f9343fe30d770 11-12
+resources/lang/fr/server.json
+  s_bdee25dbb283eb::t_8f9343fe30d770 1
+resources/lang/fr/server.php
+  s_bdee25dbb283eb::t_8f9343fe30d770 1-5
+resources/lang/en/server.json
+  s_bdee25dbb283eb::t_8f9343fe30d770 1
+tests/Feature/ServerLanguageTest.php
+  s_bdee25dbb283eb::t_ab79297de555cc 1-93
+app/Http/Middleware/UseLanguageOfThePlayer.php
+  s_bdee25dbb283eb::t_8f9343fe30d770 1-19
+bootstrap/app.php
+  s_bdee25dbb283eb::t_8f9343fe30d770 6,27
+resources/lang/fr/validation.php
+  s_bdee25dbb283eb::t_8f9343fe30d770 1-37
+resources/lang/en/server.php
+  s_bdee25dbb283eb::t_8f9343fe30d770 1-5
+scripts/lint-i18n.test.mjs
+  s_bdee25dbb283eb::t_ab79297de555cc 9-10,68-118
+  s_bdee25dbb283eb::t_03f419015a99f0 119
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9077879f61db3f5dcdf3169ce9f8bd09e16b3357",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
