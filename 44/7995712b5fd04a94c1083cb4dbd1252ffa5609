@@ -1,0 +1,35 @@
+scripts/lint-i18n.mjs
+  s_bdee25dbb283eb::t_a60a22b834b187 71
+  s_bdee25dbb283eb::t_8c8d6dd65372dc 13-15
+  s_bdee25dbb283eb::t_31c23a9b3e9242 64-70
+  s_bdee25dbb283eb::t_9e37ad16679bb4 130-133
+  s_bdee25dbb283eb::t_3393f841135fa0 1,142
+scripts/lint-i18n.test.mjs
+  s_bdee25dbb283eb::t_28e5e393d81174 17-45
+  s_bdee25dbb283eb::t_3f5d81a6730853 5
+.github/workflows/deploy.yml
+  s_bdee25dbb283eb::t_f82ce05028ef5e 63
+resources/js/i18n/index.js
+  s_bdee25dbb283eb::t_c426ae8083d734 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "447995712b5fd04a94c1083cb4dbd1252ffa5609",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
