@@ -1,0 +1,47 @@
+docs/specs/i18n-lot-1-site-foundation.plan.md
+  s_bdee25dbb283eb::t_5c80d5d9fa54f9 46
+  s_bdee25dbb283eb::t_db54f8ffd9fd6e 66
+docs/specs/i18n-lot-3-game-runtime.plan.md
+  s_bdee25dbb283eb::t_5c80d5d9fa54f9 50-51,70
+docs/specs/i18n.md
+  s_bdee25dbb283eb::t_c251eedc6fd50e 35
+resources/js/main.js
+  s_bdee25dbb283eb::t_5c80d5d9fa54f9 10
+docs/specs/i18n-site-migration.md
+  s_bdee25dbb283eb::t_5c80d5d9fa54f9 23,85-86
+scripts/lint-i18n.test.mjs
+  s_bdee25dbb283eb::t_5c80d5d9fa54f9 100,107
+docs/specs/i18n-lot-8-migration.plan.md
+  s_bdee25dbb283eb::t_5c80d5d9fa54f9 40,44,60
+docs/specs/i18n-lot-5-english-catalogs.plan.md
+  s_bdee25dbb283eb::t_5c80d5d9fa54f9 27,45,52
+docs/specs/i18n-lot-7-migration-guards.plan.md
+  s_bdee25dbb283eb::t_5c80d5d9fa54f9 50
+scripts/lint-i18n.mjs
+  s_bdee25dbb283eb::t_5c80d5d9fa54f9 1,13,84
+docs/specs/i18n-lot-2-game-foundation.plan.md
+  s_bdee25dbb283eb::t_5c80d5d9fa54f9 73
+resources/lang/fr/site.json
+  s_bdee25dbb283eb::t_611bd5fdd452ea 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1ed8e68d693e93773a5e6b4e0fe54cd864c4ed64",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
