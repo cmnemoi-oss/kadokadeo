@@ -1,0 +1,31 @@
+resources/hx/games/trigo/Text.hx
+  s_bdee25dbb283eb::t_ab2c3d2cc2ff6d 5
+resources/hx/lib/kado/I18nMacro.hx
+  s_bdee25dbb283eb::t_ce0a477818f807 7,9,11-13,16,24-26
+  s_bdee25dbb283eb::t_fddf43014dd7a8 27-28
+tests/hx/I18nTest.hx
+  s_bdee25dbb283eb::t_dce6a2bcd8d3c8 4
+tests/hx/i18n.hxml
+  s_bdee25dbb283eb::t_eedcf7b7b5ae84 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a2f4944cac3fbb76de49fdc60ac9cdd89fb50bbf",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
