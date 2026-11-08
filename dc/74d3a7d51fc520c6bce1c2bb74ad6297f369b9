@@ -1,0 +1,26 @@
+resources/lang/fr/games/mel.json
+  s_bdee25dbb283eb::t_114811865ac41c 1-42
+resources/hx/games/mel/Text.hx
+  s_bdee25dbb283eb::t_7a04f9d77570ed 4-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dc74d3a7d51fc520c6bce1c2bb74ad6297f369b9",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
