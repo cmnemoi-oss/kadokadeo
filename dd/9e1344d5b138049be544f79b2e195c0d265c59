@@ -1,0 +1,23 @@
+resources/js/pages/games/show.vue
+  s_bdee25dbb283eb::t_65f80dd18731e6 33
+resources/lang/en/site.json
+  s_bdee25dbb283eb::t_b27d488a606c51 319-320,322,324,327-328,330,390
+resources/lang/fr/site.json
+  s_bdee25dbb283eb::t_f9b24d8910a56f 22,303,337,390,458-460
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dd9e1344d5b138049be544f79b2e195c0d265c59",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
