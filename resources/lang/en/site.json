@@ -316,18 +316,18 @@
     "eternaltwin": "Eternaltwin",
     "unread_total": "{count} unread message(s) or notification(s)",
     "games": {
-      "alphabounce": "AlphaBounce is a brick breaker in which you play a prisoner sentenced to mine in space for all eternity. But perhaps you will find your way home?",
-      "dinocard": "Dinocard Rebirth is a new version of Dinocard. There are already 250 playable cards!",
+      "alphabounce": "AlphaBounce is a brick game where you are a prisoner sentenced to mine in space forever. Maybe you could get home?",
+      "dinocard": "Dinocard Rebirth is a reimplementation of Dinocard. There are already 250 playable cards!",
       "dinorpg": "Adopt Dinoz, set off on an adventure across Dinoland and make them grow through fights and missions!",
-      "directquiz": "Put your knowledge to the test in Direct Quiz, the craziest quiz game on the web!",
+      "directquiz": "Mettez votre culture à rude épreuve dans Direct Quiz, le jeu de quiz le plus déjanté du web ! (only available in French)",
       "emush": "You will wake up with 15 other players aboard the Daedalus. Like you, they are fleeing the Mush, a fungus that is ravaging planet Earth and threatening Humanity.",
-      "epopotamo": "The relaxing word game you can play anywhere!",
+      "epopotamo": "Le jeu de mots relax jouable en toute situation ! (only available in French)",
       "eternalfest": "More than 200 levels! A wide variety of very, very mean enemies!",
       "kingdom": "Make your capital prosper. Recruit soldiers and become... Emperor!",
-      "mybrute": "Settle your scores in the arena!",
-      "myhordes": "The first free zombie survival game, set in a hostile world full of the living dead!",
+      "mybrute": "Settle your differences in the arena!",
+      "myhordes": "The first free zombie survival game taking place in a hostile world populated by zombies!",
       "neoparc": "Fight other Dinoz and gradually gain experience in merciless battles!",
-      "pioupiouz": "They go \"plurtch\", they explode, they swell up, they transform, they march straight ahead without thinking, and you alone can lead them to the saving exit!"
+      "pioupiouz": "Ils se « plurtchent », ils explosent, ils se dilatent, ils se transforment, ils avancent tout droit sans réfléchir et seul vous pouvez les amener à la sortie salvatrice ! (only available in French)"
     }
   },
   "profile": {
@@ -387,7 +387,7 @@
     "loading_ranking": "Loading the ranking...",
     "loading_achievements": "Loading the achievements...",
     "not_found": "Game not found. ({error})",
-    "remaining_runs": "You have {count} game(s) left to play today",
+    "remaining_runs": "You have {count} game left to play today | You have {count} games left to play today",
     "selection": "Selection",
     "play": "Play {game}",
     "favorite_alt": "Favorite game",
