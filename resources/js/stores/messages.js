@@ -4,6 +4,7 @@ import { computed, ref } from 'vue'
 import { useApi } from '@/composables/useApi'
 import { notificationLink, notificationText } from '@/composables/useNotifications'
 import { onRealtimeReconnect, refetchSoon, useChannel, usePolling, userChannel } from '@/composables/useRealtime'
+import { t } from '@/i18n'
 import { useAuthStore } from '@/stores/auth'
 import { useClanStore } from '@/stores/clan'
 import { useToastStore } from '@/stores/toast'
@@ -39,8 +40,8 @@ export const useMessagesStore = defineStore('messages', () => {
     'message.received': (e) => {
       setCounts(e.unread)
       toastStore.show({
-        title: 'Nouveau message',
-        text: `${e.message.sender?.display_name ?? 'KadoKadéo'} : ${e.message.subject}`,
+        title: t('messages.new_message_toast'),
+        text: `${e.message.sender?.display_name ?? t('common.site_name')} : ${e.message.subject}`,
         icon: '/assets/img/gfx/icons/newMail.gif',
         to: { name: 'messages.show', params: { id: e.message.id } },
       })
