@@ -1,0 +1,63 @@
+docs/specs/i18n.md
+  s_bdee25dbb283eb::t_c552a522ec36e0 3,5,7-12,14,16,18-28,32,41,43-44,49-66,68-72
+  s_bdee25dbb283eb::t_a812ef7fddc943 1-2,4,6,13,15,17,29-31,33-40,42,45-48
+  s_bdee25dbb283eb::t_9a52c7cd854ac6 67
+docs/specs/i18n-lot-9-beta-exit.plan.md
+  s_bdee25dbb283eb::t_ae1aaf1f55eae1 1-42
+docs/specs/i18n-lot-1-site-foundation.plan.md
+  s_bdee25dbb283eb::t_2fda6047585e68 1-74
+docs/specs/i18n-lot-3-game-runtime.plan.md
+  s_bdee25dbb283eb::t_a75dde4364bc5d 1-80
+docs/specs/i18n-lot-2-game-foundation.plan.md
+  s_bdee25dbb283eb::t_e5f4ce35caa901 1-82
+docs/specs/i18n-site-texts.md
+  s_bdee25dbb283eb::t_ee8d8d0d2a00a0 2-8,10-18,20-22,24,26,33-34,36-42,44-45,56,58,61-65,72,79-88,90-95,97,100-105,108-109,112-113,115,119,121-123,127
+  s_bdee25dbb283eb::t_cf4a6e01626d3f 89
+  s_bdee25dbb283eb::t_4a0054006b9f4a 114
+  s_bdee25dbb283eb::t_90630fca44ce48 1,9,19,23,25,27-32,35,43,46-55,57,59-60,66-71,73-78,96,98-99,106-107,110-111,116-118,120,124-126
+docs/specs/i18n-lot-4-language-choice.plan.md
+  s_bdee25dbb283eb::t_1eb7e1c12e21ec 1-147
+docs/specs/i18n-lot-8-migration.plan.md
+  s_bdee25dbb283eb::t_84bcd9c8c5955b 1-88
+docs/specs/i18n-game-texts.md
+  s_bdee25dbb283eb::t_5c9b42d7b78581 1-30,37-46,48,50-51,54,56,61-70,72-96,98-103,108-113,117,119,121-122,125-128,130,133-134
+  s_bdee25dbb283eb::t_cd615fd72d4018 114
+  s_bdee25dbb283eb::t_f34dd9dbe3d30d 31-36,49,52-53,55,57-60,71,97,104-107,115-116,118,120,123-124,129,131-132
+  s_bdee25dbb283eb::t_213788c4b597d6 47
+docs/specs/i18n-language-choice.md
+  s_bdee25dbb283eb::t_b2404af924f9fe 1-16,18-28,30-36,38-46,51,58-66,69,71,76-79,81-92,99-111,116-118,121,123,125-132
+  s_bdee25dbb283eb::t_72ca603e64f2b4 17,29,37,47-50,52-57,67-68,70,72-75,80,93-98,112-115,119-120,122,124,133
+docs/specs/i18n-lot-7-migration-guards.plan.md
+  s_bdee25dbb283eb::t_7cad0117cb9da6 1-59
+docs/specs/i18n-site-migration.md
+  s_bdee25dbb283eb::t_e55c9a172060d5 9,29,31-36,48-53,55,60-61,64-75,81,83,86-87,89,94-96
+  s_bdee25dbb283eb::t_35edb24e69490a 1-8,10-28,30,37-47,54,56-59,62-63,76-80,82,84-85,88,90-93,97-100
+docs/specs/i18n-lot-5-english-catalogs.plan.md
+  s_bdee25dbb283eb::t_fc918637ffbce3 9,11
+  s_bdee25dbb283eb::t_901523012eacfb 26
+  s_bdee25dbb283eb::t_3b5ab2c789d4d6 1-8,10,12-25,27-43,45-67
+  s_bdee25dbb283eb::t_1eab4adf5ad7a3 44
+docs/specs/i18n-lot-6-pseudo-locale.plan.md
+  s_bdee25dbb283eb::t_6e6f042b9cbe86 1-55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "267c50595c938cfef53b7d3e642d9ea92ff5e2a4",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "unknown"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
