@@ -1,0 +1,25 @@
+scripts/eslint-i18n.test.mjs
+  s_bdee25dbb283eb::t_74e87aba9c7498 9
+resources/js/pages/help.vue
+  s_bdee25dbb283eb::t_3b84171476c597 2-4,13-15,21-35,70-78,80-81,89,91,96,130-131,136-143,147-150,154-166,170,172,174,178,182-185,197,207,212,216-230,234-253,257-266,270-274,278-281,286,288-289,292,294-295,298,300-301,305-308,312-328,332,337-340,347,356,364-365,370-371,376,380,384,388,396-401,405-408,419,421
+eslint.config.js
+  s_bdee25dbb283eb::t_74e87aba9c7498 24
+resources/lang/fr/site.json
+  s_bdee25dbb283eb::t_74e87aba9c7498 471-638
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5c93524c4b37e59c20920914be5150ac005ab032",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
