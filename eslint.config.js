@@ -21,6 +21,7 @@ const FILES_WITH_TRANSLATED_TEXTS = [
   'resources/js/pages/login.vue',
   'resources/js/pages/loginCallback.vue',
   'resources/js/pages/bestsScores.vue',
+  'resources/js/pages/help.vue',
   'resources/js/pages/forum/*.vue',
   'resources/js/layouts/*.vue',
   'resources/js/App.vue',
