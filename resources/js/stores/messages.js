@@ -48,7 +48,7 @@ export const useMessagesStore = defineStore('messages', () => {
     },
     'notification.received': (e) => {
       setCounts(e.unread)
-      toastStore.show({ title: 'Notification', text: notificationText(e.notification), to: notificationLink(e.notification) ?? { name: 'messages.notifications' } })
+      toastStore.show({ title: t('notifications.toast_title'), text: notificationText(e.notification), to: notificationLink(e.notification) ?? { name: 'messages.notifications' } })
       // his application answered: the menus show his clan, or no longer his application
       if (e.notification.type === 'clan_accepted' || e.notification.type === 'clan_refused') {
         useClanStore().reload()
