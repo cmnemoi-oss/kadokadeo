@@ -1,0 +1,64 @@
+resources/js/i18n/index.spec.js
+  s_bdee25dbb283eb::t_a5d06c3a7b352e 6,67-72
+  s_bdee25dbb283eb::t_78140b79abeeef 73
+resources/js/components/notifications/List.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 4,41,59,67,73-74,87,91,93
+resources/js/components/KadoAchievementBanner.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 9-10,104,110
+resources/js/layouts/default.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 22,63-64
+resources/js/i18n/index.js
+  s_bdee25dbb283eb::t_2de69dafe77a32 20-22,27-29,43-44
+  s_bdee25dbb283eb::t_3a0436faa313ee 23-26
+resources/js/pages/forum/index.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 34-35,41
+resources/js/pages/loginCallback.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 24
+resources/js/stores/league.js
+  s_bdee25dbb283eb::t_2de69dafe77a32 3-4,9,16,23,30,37
+eslint.config.js
+  s_bdee25dbb283eb::t_3a0436faa313ee 32-33,122-129,137
+  s_bdee25dbb283eb::t_2de69dafe77a32 23-31,34-35
+scripts/eslint-i18n.test.mjs
+  s_bdee25dbb283eb::t_3a0436faa313ee 49-56
+resources/js/pages/forum/section.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 45,51,62
+resources/js/pages/bestsScores.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 15,17-18,23-25
+resources/js/components/KadoToasts.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 36
+resources/js/composables/useNotifications.js
+  s_bdee25dbb283eb::t_2de69dafe77a32 2,10,12,15,17,21-22,25,27,29,31
+resources/js/stores/messages.js
+  s_bdee25dbb283eb::t_2de69dafe77a32 7,43-44
+resources/js/components/message/PendingRuns.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 6,19,39,61,63-64,72
+  s_bdee25dbb283eb::t_3a0436faa313ee 48,55
+resources/js/components/marktwin/Editor.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 47,68-69
+resources/js/pages/forum/thread.vue
+  s_bdee25dbb283eb::t_2de69dafe77a32 66-67,85,87
+resources/lang/fr/site.json
+  s_bdee25dbb283eb::t_2de69dafe77a32 16-41,47-92
+  s_bdee25dbb283eb::t_3a0436faa313ee 42-46
+scripts/lint-i18n.mjs
+  s_bdee25dbb283eb::t_9fdae6f24883ad 98
+scripts/lint-i18n.test.mjs
+  s_bdee25dbb283eb::t_01849d26206454 162-165
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cda0da8202cd66af7b4d7bf15bf00dcd096be207",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
