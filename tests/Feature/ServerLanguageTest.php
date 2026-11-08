@@ -93,6 +93,17 @@ class ServerLanguageTest extends TestCase
         $this->askInEnglish()->assertJsonPath('validation', 'The nom field is required.');
     }
 
+    public function test_a_message_of_the_api_is_in_english_for_an_english_request(): void
+    {
+        $this->languagesOn();
+
+        $message = $this->askInEnglish('/api/oauth/callback?code=a&state=b')->assertStatus(422)->json('message');
+
+        $this->assertNotSame('server.account.login_expired', $message);
+        $this->assertNotSame(__('server.account.login_expired', [], 'fr'), $message);
+        $this->assertSame(__('server.account.login_expired', [], 'en'), $message);
+    }
+
     public function test_a_message_of_the_api_is_in_french_for_a_french_request(): void
     {
         $this->languagesOn();
