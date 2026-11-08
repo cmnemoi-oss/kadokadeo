@@ -468,5 +468,173 @@
     "value": "Value",
     "next_step": "Next milestone",
     "game_ranking": "Ranking of this game"
+  },
+  "help": {
+    "title": "Help",
+    "previous": "Previous",
+    "next": "Next",
+    "overview": "Overview",
+    "kado_alt": "Kado",
+    "kado_points": "Kado points",
+    "sections": {
+      "welcome": "Welcome",
+      "periods": "Periods",
+      "daily": "Game of the day",
+      "stars": "Stars",
+      "levels": "Levels",
+      "clans": "Clans",
+      "attacks": "Attacks",
+      "attacks_short": "Attacks",
+      "defenses": "Defenses",
+      "defenses_short": "Defenses",
+      "roles": "Roles",
+      "roles_short": "Roles",
+      "missions": "Missions",
+      "missions_short": "Missions",
+      "options": "Options",
+      "options_short": "Options",
+      "clan_ranking": "The clan ranking",
+      "clan_ranking_short": "Clan ranking",
+      "v1_ranking": "The V1 ranking",
+      "account": "My account",
+      "questions": "Questions"
+    },
+    "welcome": {
+      "intro": "Welcome to {site}, the return of KadoKado by the Eternaltwin project! Find the Motion-Twin games again, beat your records and climb the levels of each game.",
+      "contract": "Every day, you have a number of games to play on the games you like best. The game of the day also offers you a contract: a score to beat to win {points} {icon}.",
+      "navigation": "Use this menu or the \"Next\" button to discover the rest of the site!",
+      "navigation_with_clans": "Join a clan to play as a team, and use this menu or the \"Next\" button to discover the rest of the site!"
+    },
+    "periods": {
+      "length": "A KadoKadéo period lasts two weeks, that is {days}. The Kalendrier shown at the top right of the site gives the current period and the current day.",
+      "days": "14 days",
+      "close": "When a period ends, the rankings are reset: the best players of each level move up to the next level and win Kado points. The ranking of the game of the day is also rewarded at that moment.",
+      "close_with_clans": "When a period ends, the rankings are reset: the best players of each level move up to the next level and win Kado points, and the clan tournament starts again. The ranking of the game of the day is also rewarded at that moment."
+    },
+    "daily": {
+      "draw": "Every day at midnight (UTC), a game is drawn at random. The run is {same}, and you only get {attempt}. It also offers you a contract: a score to beat to win Kado points {icon}.",
+      "same": "the same for all players",
+      "attempt": "one attempt",
+      "top10": "The top 10 of each day earns {ranking_points}: 10 points for 1st place, 9 for 2nd, and so on down to 1 point for 10th. They add up day after day in the ranking of the period, shown next to the game.",
+      "ranking_points": "ranking points",
+      "reward": "At the end of the period, {every_player} receives {kado} {icon} per ranking point. The details of your reward appear in the \"Last period\" tab of your profile.",
+      "every_player": "each player with at least one point"
+    },
+    "stars": {
+      "intro": "If you get a very good score in a game, you win a star. There are three star levels for each game:",
+      "green": "green star",
+      "orange": "orange star",
+      "red": "red star",
+      "green_with_article": "the green star",
+      "orange_with_article": "the orange star",
+      "red_with_article": "the red star",
+      "outro": "The star you have is shown on the box of each game. Stars also count for moving up to the next level: a minimum star is required depending on the level you are in."
+    },
+    "levels": {
+      "intro": "Each time you move up a level, you get extra Kado points, which increase as your level progresses:",
+      "level": "Level",
+      "qualified": "Qualified",
+      "star": "Star",
+      "kado_points": "Kado points",
+      "ratio": "{ratio}% (max {max})",
+      "alone": "If a player is alone in their level, they can only move up if there are players in the next level. Otherwise, at least 2 players are needed to be able to move up."
+    },
+    "clans": {
+      "intro": "A Clan is a group of players (maximum {max}) who band together to fight against other clans.",
+      "join": "You can either join an existing Clan by sending your application from its page, or create your own Clan from the {link} section.",
+      "join_link": "Clans",
+      "prices": "Creating a Clan costs {creation} and each application {application}. You can apply to several clans at once: as soon as a clan accepts you, your other applications are withdrawn and refunded. An application that is refused or that you withdraw is also refunded.",
+      "price": "{points} Kado points",
+      "locked": "A player accepted into a Clan cannot leave it or be excluded from it during the period in which they joined it.",
+      "leaders": "The Clan is led by its {chief}, who can appoint {right_hands}: they have all the rights of the leader (applications, exclusions, options, roles), except disbanding the Clan and appointing a new leader.",
+      "chief": "leader",
+      "right_hands": "seconds-in-command",
+      "two_rankings": "Each Clan has two scores and two positions: one in the attack ranking and one in the mission ranking. You can take part in either of these rankings, or both!",
+      "player_ranking": "Within the Clan, players also have their own ranking: 1 point per mission step completed, and the points of each successful attack and each successful defense."
+    },
+    "attacks": {
+      "icon_alt": "Attack",
+      "how": "{icon} To earn points, a Clan must attack another Clan: go to the page of an opposing Clan, click \"Attack this clan\", choose a game and play it.",
+      "repel": "Your score becomes an attack. To repel it, the opposing Clan must get a higher score than yours. A repelled attack is canceled, and your Clan loses nothing.",
+      "reward": "If after {hours} the attack has not been repelled, your Clan wins from 1 to {points} and the opposing Clan loses as many (never below zero). Against a Clan with as many points as yours or more, the attack earns {max} points; it is one point less for every {palier} points it has fewer than you. The number of points is shown before attacking. Attack clans with a score close to yours: those more than {range} points away from you are protected from your attacks.",
+      "hours": "{hours} hours",
+      "points": "{points} points",
+      "upgrade": "Each player can have one attack in progress at a time. To improve it, click \"Improve\" in the Status tab and play again on the same game: the new score only replaces the attack's score if it is better, and the opposing Clan again has {hours} hours to beat it.",
+      "closing": "An attack must be able to finish before the end of the period: attacks and improvements close {before_end}. Defenses remain possible until the very end.",
+      "before_end": "{hours} hours before the end of the period",
+      "games": "Every day, you have {free} to attack and defend (the green gem in the Clan menu), separate from your normal games. Once they are played, you can attack and defend with {clan_games}, bought with your Kado points ({packs}). You can keep them for yourself or give them to your Clan: the leader and their seconds-in-command then distribute them to the members. The free games of the day cannot be given.",
+      "free": "{games} free games",
+      "clan_games": "clan games",
+      "pack": "{games} for {price} points"
+    },
+    "defenses": {
+      "icon_alt": "Defense",
+      "where": "{icon} The attacks launched by your Clan and those made against it are shown in the Status tab of your clan. Click \"Defend\" and beat the attack's score on the same game.",
+      "blocked": "Note that as long as you have an attack in progress, you cannot defend! So you will need to coordinate the members of the Clan between attackers and defenders.",
+      "defender": "A {defender} can defend even when they have an attack in progress: see {link}.",
+      "defender_link": "the roles",
+      "reserve": "Will you beat the score of an attack later? Click \"Reserve\" in the Status tab to let your Clan know. Any member can take over the reservation: it is only information.",
+      "progress": "To climb the ranking, you will have to both win attacks and defend effectively against enemy clans."
+    },
+    "roles": {
+      "intro": "For attacks and defenses, each player in the Clan has a role. Without a seat, they are a plain {member}. The leader and their seconds-in-command can give the {attacker} and {defender} seats from \"Manage the clan\".",
+      "role": "Role",
+      "attacks_at_once": "Attacks at the same time",
+      "defend_while_attacking": "Defend with an attack in progress",
+      "seats": "Seats",
+      "attacker": "Attacker",
+      "defender": "Defender",
+      "member": "Member",
+      "yes": "Yes",
+      "no": "No",
+      "seats_share": "{percent}% of the members",
+      "seats_others": "The others",
+      "example": "The number of seats depends on the number of members, rounded down, with at least one seat of each role. For example, a Clan of {max} players has {attackers} Attacker seats and {defenders} Defender seats; a Clan of 4 players has one of each.",
+      "locked": "Be careful, a role once given is {locked_until}: it can no longer be changed or removed before the next period. Choose your Attackers and Defenders well! Everyone's roles are shown in the Members tab.",
+      "locked_until": "locked until the end of the period"
+    },
+    "missions": {
+      "time": "Your Clan receives missions: several steps, each one a score to reach on a game. You have {hours} to complete them all. Everyone can do the steps on the games they are best at, and mission games are {free}!",
+      "time_decreasing": "Your Clan receives missions: several steps, each one a score to reach on a game. You have {hours} to complete them all during the first mission of the period, then {less} less for each mission completed (at least {min}). Everyone can do the steps on the games they are best at, and mission games are {free}!",
+      "hours": "{hours} hours",
+      "free": "free and unlimited",
+      "reserve": "As with defenses, everyone can \"Reserve\" a step to let the Clan know they are taking care of it.",
+      "steps": "The more members your Clan has, the more steps the missions have: {alone} for a player on their own, up to {full} for {max} players. The score to reach increases with the missions, until it exceeds the red star. Each mission mixes steps of all difficulties, up to the red star and beyond, and keeps easier steps (from half of the green star, a little harder with each mission), so that everyone can take part.",
+      "reward": "A completed mission earns {points} (one point less every {every} missions, at least {min}) and opens the next mission. If time runs out, your Clan loses one point per step not completed, minus one, and receives a new mission. How many missions will your Clan complete?",
+      "points": "{points} points"
+    },
+    "options": {
+      "intro": "Each completed mission has a {chance}% chance of earning it an option. The clan leader or a second-in-command uses them. Each Jeu caca and each Jeu cool adds a game to the Clan's list of jeux caca or jeux cool; a game can only be in one list. If there are more jeux cool than steps, the mission takes some of them at random. They are reset at the end of the period.",
+      "intro_with_starting": "At the start of each period, your Clan receives the following options: {bonuses}. Each completed mission has a {chance}% chance of earning it an option. The clan leader or a second-in-command uses them. Each Jeu caca and each Jeu cool adds a game to the Clan's list of jeux caca or jeux cool; a game can only be in one list. If there are more jeux cool than steps, the mission takes some of them at random. They are reset at the end of the period.",
+      "last_bonus": "{bonuses} and {last}",
+      "bonus": "{label}: {description}"
+    },
+    "clan_ranking": {
+      "intro": "The clan tournament lasts one period. At the end, the best-ranked clans of each ranking win Kado points, shared equally among their members. \"Strength in unity\"!",
+      "war": "Attack ranking",
+      "missions": "Mission ranking",
+      "range": "{from} to {to}"
+    },
+    "v1_ranking": {
+      "intro": "Each period, the V1 ranking competition takes place. It is a ranking in which the 12 best scores of each player are added up, to reach a maximum of 18,000 points",
+      "scale": "The scores of each game are converted to a scale from 0 to 1500 according to the following criteria:",
+      "score_reached": "Score reached",
+      "v1_points": "Number of V1 points",
+      "green_star": "Green star",
+      "orange_star": "Orange star",
+      "red_star": "Red star",
+      "v1_score": "V1 score"
+    },
+    "account": {
+      "look": "In {link}, you can change the look of the site.",
+      "look_link": "My account",
+      "karbon": "The {theme} theme is bought once with your Kado points: you can then switch from one theme to the other whenever you like.",
+      "karbon_theme": "Karbon"
+    },
+    "questions": {
+      "other": "Do you have other questions? The players of KadoKadéo and the Eternaltwin team will answer you on the {discord}.",
+      "discord": "KadoKadéo Discord",
+      "enjoy": "Enjoy playing on KadoKadéo!"
+    }
   }
 }
