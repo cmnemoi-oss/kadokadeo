@@ -1,0 +1,63 @@
+resources/js/components/profile/LastPeriod.vue
+  s_bdee25dbb283eb::t_c1b03a3345a2fe 112-115,121-124
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 7,9,42-44,47-54,63,65,67,72,74,77-111,116-120,125-130,132,134,137,142-146,151,154,160,162,166-169,178,184,187
+resources/js/components/games/GamePlayer.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 78,91,97,106-107,123,128,130-131
+resources/lang/fr/site.json
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 32-44,285-470
+resources/js/components/nav/Kalendrier.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 2-3,15-16,18,40,42,47-48,52,58-59,64-65,71-72,77-78,83,89
+resources/js/components/games/DailyGameBlock.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 16,27-33,35,37,40
+resources/js/components/games/GameControls.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 2-3,9-23,52-53
+resources/js/components/nav/TopBar.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 2,17-28,58,62,81-82,89,91,95,99,105,109
+resources/js/components/nav/Navbar.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 13,18,23
+resources/js/pages/games/daily.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 33
+resources/js/components/games/GameScoreTable.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 15-19
+resources/js/components/games/GameSide.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 4-5,31,34,37,41,45,54,57,121-124,140,143,150,164-166,178,183-184,190,213,216,220,227,230
+resources/js/components/games/DailyStandingsTable.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 14-16
+resources/js/components/nav/Pagination.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 21,24-25,33-34
+eslint.config.js
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 25-26,41-51,57
+  s_bdee25dbb283eb::t_c1b03a3345a2fe 159
+resources/js/pages/games/index.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 46,60,67,73,78,88
+resources/js/pages/games/ranking.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 29,33,35,39,53
+resources/js/pages/games/records.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 79-80,85,89-90,95,106,112,153,156,161
+resources/js/pages/games/show.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 2-3,17,26,28,33
+resources/js/pages/profile/show.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 131-133,138-139,142,153,161,164,208,217,224,229,234,239,251-252,275,302,313,323-325,330-333,368,373
+resources/js/components/games/GameScript.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 2-3,53,57,64,87,172-173,180,187,195,226
+resources/js/components/games/DailyGameSide.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 4-5,16-18,28,31,38,41,43,48,51-55,57
+resources/js/components/nav/Starbar.vue
+  s_bdee25dbb283eb::t_1c1f8ba82daaf4 9,13,17,21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2f80f25ba34626475d201c4d5e7752095d0f2354",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
