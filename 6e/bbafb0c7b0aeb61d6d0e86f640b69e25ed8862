@@ -1,0 +1,22 @@
+resources/js/components/Number.spec.js
+  s_bdee25dbb283eb::t_fd88171c7a8c54 1-39
+  s_bdee25dbb283eb::t_7809dc01ca3887 40-41
+resources/js/components/Number.vue
+  s_bdee25dbb283eb::t_fd88171c7a8c54 19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6ebbafb0c7b0aeb61d6d0e86f640b69e25ed8862",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
