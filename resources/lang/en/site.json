@@ -13,5 +13,82 @@
     "auto": "Automatic",
     "fr": "Français",
     "en": "English (beta)"
+  },
+  "common": {
+    "please_wait": "Please wait...",
+    "close": "Close",
+    "site_name": "KadoKadéo",
+    "menu": "Menu",
+    "error_with": "Error: {error}",
+    "delete": "Delete"
+  },
+  "site_records": {
+    "title": "Site records",
+    "loading": "Loading the records...",
+    "game": "Game",
+    "record": "Site record",
+    "player": "Player"
+  },
+  "achievement_banner": {
+    "unlocked": "Achievement unlocked!",
+    "level": "Level {level}"
+  },
+  "pending_runs": {
+    "confirm_delete": "Delete the game of {game} ({score} points) for good?",
+    "not_sent": "A game could not be sent to the server. | {count} games could not be sent to the server.",
+    "detail": ": {score} points, on {date}",
+    "error": "Error: {error}",
+    "unreachable": "server unreachable",
+    "attempts": "({count} attempt) | ({count} attempts)",
+    "sending": "Sending...",
+    "retry": "Try again",
+    "hide_details": "Hide the details",
+    "show_details": "Show the details"
+  },
+  "editor": {
+    "nothing_to_preview": "Nothing to preview.",
+    "syntax": "**bold** _italic_ __underline__ ~~strikethrough~~ {'|'}{'|'}spoiler{'|'}{'|'} [link](https://…) [quote=name]…[/quote]",
+    "edit": "Edit",
+    "preview": "Preview"
+  },
+  "forum": {
+    "topics": "{count} topic(s)",
+    "unread": "{count} unread",
+    "not_open": "The forum is not open yet.",
+    "new_topic": "New topic",
+    "topic_title": "Topic title",
+    "create_topic": "Create the topic",
+    "locked_short": "Locked",
+    "locked_title": "Locked topic",
+    "reply": "Reply",
+    "locked": "This topic is locked."
+  },
+  "notifications": {
+    "confirm_delete_all": "Delete all your notifications?",
+    "none": "You have no notifications.",
+    "excerpt": "\"{excerpt}\"",
+    "older": "Older",
+    "delete_all": "Delete all",
+    "retention": "Notifications are deleted automatically after two months.",
+    "a_player": "A player",
+    "of_game": " of {game}",
+    "run_comment": "{actor} commented on your replay{ofGame}.",
+    "comment_reply": "{actor} replied to your comment on the replay{ofGame}.",
+    "comment_likes_others": "{actor} and {count} other liked your comment on the replay{ofGame}. | {actor} and {count} others liked your comment on the replay{ofGame}.",
+    "comment_like": "{actor} liked your comment on the replay{ofGame}.",
+    "clan_application": "{actor} asks to join your clan {clan}.",
+    "clan_accepted": "You were accepted into the clan {clan}!",
+    "clan_refused": "Your application to the clan {clan} was refused: your Kado points were given back.",
+    "new": "New notification."
+  },
+  "messages": {
+    "new_message_toast": "New message"
+  },
+  "leagues": {
+    "beginner": "Beginner level",
+    "bronze": "Bronze level",
+    "silver": "Silver level",
+    "gold": "Gold level",
+    "paradise": "Paradise level"
   }
 }
