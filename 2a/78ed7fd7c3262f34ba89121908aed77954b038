@@ -1,0 +1,30 @@
+resources/hx/lib/kado/StartScene.hx
+  s_bdee25dbb283eb::t_3e3ab8b7506649 52,82,88-89,94,106,108,118
+resources/hx/lib/kado/SubmitPopup.hx
+  s_bdee25dbb283eb::t_1aabc28af8f79b 28,33,35
+resources/lang/en/kado.json
+  s_bdee25dbb283eb::t_7b79293e28e734 7-20
+resources/lang/fr/kado.json
+  s_bdee25dbb283eb::t_e0b6f1ded62e0d 7-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2a78ed7fd7c3262f34ba89121908aed77954b038",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
