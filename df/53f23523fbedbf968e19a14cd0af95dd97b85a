@@ -1,15 +1,23 @@
 resources/lang/en/games/trigo.json
   s_bdee25dbb283eb::t_3e73a6b5b0f879 1-5
+  s_bdee25dbb283eb::t_55ad3b8f647c87 1-5
 resources/lang/en/kado.json
   s_bdee25dbb283eb::t_cc45b18c15d977 6-7
+  s_bdee25dbb283eb::t_500ac62152e903 6-7
 resources/lang/en/site.json
   s_bdee25dbb283eb::t_760599cfab64df 1-17
+  s_bdee25dbb283eb::t_a07f06a80245ab 1-17
 ---
 {
   "schema_version": "authorship/3.0.0",
   "git_ai_version": "1.7.5",
   "base_commit_sha": "df53f23523fbedbf968e19a14cd0af95dd97b85a",
   "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
   "sessions": {
     "s_bdee25dbb283eb": {
       "agent_id": {
