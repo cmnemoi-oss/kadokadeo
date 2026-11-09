@@ -1,0 +1,32 @@
+resources/js/main.js
+  s_bdee25dbb283eb::t_a9d2b1075aabd3 10,13
+  s_bdee25dbb283eb::t_f9c3c6bf61a0eb 24
+resources/js/i18n/index.spec.js
+  s_bdee25dbb283eb::t_b9cfed6b6189bc 1-56
+resources/js/i18n/index.js
+  s_bdee25dbb283eb::t_ad5de3bd495a7e 1,4-34
+  s_bdee25dbb283eb::t_f96bc030b1ee04 2-3
+vite.config.js
+  s_bdee25dbb283eb::t_e776f4af96b216 113-116
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3ac02d5daec87a2c66d63665eba7500e161542c1",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
