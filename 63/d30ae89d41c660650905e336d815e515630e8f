@@ -1,0 +1,56 @@
+app/Http/Controllers/LoginController.php
+  s_bdee25dbb283eb::t_1af5ddb82a9c2b 9,145-149
+app/Support/LocaleResolver.php
+  s_bdee25dbb283eb::t_0e0aad4a3cce63 6-9,11-12,15-42,45-55,59-70,72-79
+  s_bdee25dbb283eb::t_39701ed7f9f468 1-5,10,13-14,43-44,56-58,71,80-81
+bootstrap/app.php
+  s_bdee25dbb283eb::t_1af5ddb82a9c2b 6,31
+tests/Unit/LocaleResolverTest.php
+  s_bdee25dbb283eb::t_2620c0e393f614 1-100
+routes/api.php
+  s_bdee25dbb283eb::t_1af5ddb82a9c2b 80
+tests/Feature/LocalePreferenceTest.php
+  s_bdee25dbb283eb::t_6280b8d79cea98 12,32,51,138
+  s_bdee25dbb283eb::t_fb7b2f0e146f6b 1-11,13-31,33-50,52-102,105-106,108,110-137,139-159,161-163
+  s_bdee25dbb283eb::t_1af5ddb82a9c2b 103-104,107,109,160
+database/settings/2026_11_08_000000_add_i18n_enabled_setting.php
+  s_bdee25dbb283eb::t_acfb00c995799b 1-17
+resources/views/layouts/default.blade.php
+  s_bdee25dbb283eb::t_1af5ddb82a9c2b 2,21-23
+app/Enums/LocalePreference.php
+  s_bdee25dbb283eb::t_7778dae6dd8c04 1-11
+app/Http/Controllers/Api/UserPreferenceController.php
+  s_bdee25dbb283eb::t_1af5ddb82a9c2b 5,11,39-48
+  s_bdee25dbb283eb::t_06f9c05ce22fd0 49
+app/Http/Resources/UserResource.php
+  s_bdee25dbb283eb::t_1af5ddb82a9c2b 33-34
+database/migrations/2026_11_08_000001_add_locale_to_users_table.php
+  s_bdee25dbb283eb::t_7be393be83811d 1-23
+app/Filament/Pages/ManageSiteSettings.php
+  s_bdee25dbb283eb::t_e3312b680941fb 79-81
+app/Models/User.php
+  s_bdee25dbb283eb::t_95ad85035ea9c9 8,22,37-40,60
+app/Settings/SiteSettings.php
+  s_bdee25dbb283eb::t_47bf1dac73fb39 45-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "63d30ae89d41c660650905e336d815e515630e8f",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
