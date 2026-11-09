@@ -1,0 +1,30 @@
+lang/fr/site.json
+  s_bdee25dbb283eb::t_346ce8a87c38f5 1
+.github/workflows/deploy.yml
+  s_bdee25dbb283eb::t_93f3de71296f10 60-68
+scripts/lint-i18n.test.mjs
+  s_bdee25dbb283eb::t_c94fc3500f7e46 1-111
+scripts/lint-i18n.mjs
+  s_bdee25dbb283eb::t_6d7aeea063f41c 1-136
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "93b11b6a5ae58e3941d14a48b99bebb205573b72",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "unknown"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
