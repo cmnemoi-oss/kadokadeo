@@ -50,6 +50,12 @@ const FILES_WITH_TRANSLATED_TEXTS = [
   'resources/js/components/Number.vue',
   'resources/js/components/kado/*.vue',
   'resources/js/components/form/*.vue',
+  // not pages/clans/debug.vue: a tool of the developers, never in production, in French like the admin panel
+  'resources/js/pages/clans/index.vue',
+  'resources/js/pages/clans/play.vue',
+  'resources/js/pages/clans/show.vue',
+  'resources/js/pages/clans/forum/*.vue',
+  'resources/js/components/clan/**/*.vue',
 ]
 const SCRIPTS_WITH_TRANSLATED_TEXTS = [
   'resources/js/stores/*.js',
@@ -157,7 +163,7 @@ export default defineConfig([
       'no-restricted-syntax': ['error', NO_USE_API, ...NO_ACCENTED_TEXT],
       'vue/no-restricted-syntax': ['error', ...NO_ACCENTED_TEXT],
       'vue/no-bare-strings-in-template': ['error', {
-        allowlist: ['/^[0-9]+$/', '(', ')', ',', '.', '&', '+', '-', '=', '*', '/', '#', '%', '!', '?', ':', '[', ']', '{', '}', '<', '>', '•', '·', '—', '×', '…', '›', '‹', '❌', ' ', '|'],
+        allowlist: ['/^[0-9]+$/', '(', ')', ',', '.', '&', '+', '-', '=', '*', '/', '#', '%', '!', '?', ':', '[', ']', '{', '}', '<', '>', '•', '·', '—', '×', '…', '›', '‹', '❌', '🔒', ' ', '|'],
         attributes: {
           '/.+/': ['title', 'label', 'placeholder', 'aria-label', 'aria-placeholder', 'aria-roledescription', 'aria-valuetext'],
           img: ['alt'],

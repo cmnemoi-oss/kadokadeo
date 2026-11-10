@@ -6,7 +6,7 @@ import { test } from 'node:test'
 import { ESLint } from 'eslint'
 
 const MIGRATED_FILE = 'resources/js/pages/login.vue'
-const OTHER_FILE = 'resources/js/pages/clans/index.vue'
+const OTHER_FILE = 'resources/js/pages/clans/debug.vue'
 
 const eslint = new ESLint()
 
