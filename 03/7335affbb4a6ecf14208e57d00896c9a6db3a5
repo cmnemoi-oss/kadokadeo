@@ -1,0 +1,23 @@
+resources/hx/games/kanjisadventure/Ent.hx
+  s_bdee25dbb283eb::t_c80deba88daf59 277
+resources/lang/en/games/kanjisadventure.json
+  s_bdee25dbb283eb::t_a251a89207d21c 91-92
+resources/lang/fr/games/kanjisadventure.json
+  s_bdee25dbb283eb::t_5c5f23bd0f2abf 91-92
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "037335affbb4a6ecf14208e57d00896c9a6db3a5",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
