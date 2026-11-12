@@ -1,0 +1,23 @@
+resources/js/components/message/Announcement.vue
+  s_bdee25dbb283eb::t_2753ce3430b84d 8,41
+resources/js/i18n/locale.js
+  s_bdee25dbb283eb::t_0e0a8c84d86ba2 8-10
+resources/js/i18n/locale.spec.js
+  s_bdee25dbb283eb::t_05e7834cdd43ca 3,66-77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "01e70ac8b0aad0efe7bba3d08332df3f64099ae2",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
