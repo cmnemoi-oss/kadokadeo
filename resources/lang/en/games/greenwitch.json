@@ -24,5 +24,6 @@
   "Weapon0": "Magic dart",
   "Weapon1": "Lightning",
   "Weapon2": "Grenades",
-  "Weapon3": "Lasers"
+  "Weapon3": "Lasers",
+  "Xp": "{_n} xp"
 }
