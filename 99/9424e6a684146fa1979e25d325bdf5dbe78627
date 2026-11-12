@@ -1,0 +1,55 @@
+resources/hx/games/fafi360/Lang.hx
+  s_bdee25dbb283eb::t_ea1052f152a1cd 3-5
+resources/hx/games/kanjisadventure/Ent.hx
+  s_bdee25dbb283eb::t_8eec4b68f243eb 209,211,213,217,219,221
+resources/hx/games/kanjisadventure/Game.hx
+  s_bdee25dbb283eb::t_04097356bcaead 378,451,598,608,611,620,623,626,629,634,646,659,661,674,677,694,704,713,718,722,725,757-758,772,898,909,920
+resources/hx/games/kanjisadventure/Lang.hx
+  s_bdee25dbb283eb::t_bbb3f25ad3b912 3-4,6-8,10-12,15,18-21
+resources/hx/games/kanjisadventure/ent/Bad.hx
+  s_bdee25dbb283eb::t_d6471d531e7c7b 352
+resources/hx/games/kanjisadventure/ent/Hero.hx
+  s_bdee25dbb283eb::t_e5fb6a0b033562 125
+resources/hx/games/kanjisadventure/ev/Floor.hx
+  s_bdee25dbb283eb::t_90df8aa28fa36c 23,25,27,29-30
+resources/hx/games/kanjisadventure/ev/Trader.hx
+  s_bdee25dbb283eb::t_131eac985954a2 123,152,178,180
+resources/hx/games/starfang/Game.hx
+  s_bdee25dbb283eb::t_efd4044f413ee0 171
+resources/hx/games/starfang/Lang.hx
+  s_bdee25dbb283eb::t_601c6582207f58 1-5
+resources/hx/games/toutcaen/Game.hx
+  s_bdee25dbb283eb::t_eda27f2609677b 410
+resources/hx/games/toutcaen/Lang.hx
+  s_bdee25dbb283eb::t_3fe19fdee9dcdd 1-5
+resources/hx/games/tubulo/Game.hx
+  s_bdee25dbb283eb::t_ace959da5e425d 507
+resources/hx/games/tubulo/Lang.hx
+  s_bdee25dbb283eb::t_4e80be741023df 1-5
+resources/lang/fr/games/fafi360.json
+  s_bdee25dbb283eb::t_87527f71a42d96 1-14
+resources/lang/fr/games/kanjisadventure.json
+  s_bdee25dbb283eb::t_f28316c36bb698 1-92
+resources/lang/fr/games/starfang.json
+  s_bdee25dbb283eb::t_7e257bb388e093 1-3
+resources/lang/fr/games/toutcaen.json
+  s_bdee25dbb283eb::t_95612cc74cfa90 1-3
+resources/lang/fr/games/tubulo.json
+  s_bdee25dbb283eb::t_dbd81509ffd7de 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "999424e6a684146fa1979e25d325bdf5dbe78627",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
