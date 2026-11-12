@@ -1,12 +1,20 @@
 <script setup>
 import PromotionPlay from '@svg/promotionPlay.svg'
 
+import { t } from '@/i18n'
+
 const { isLoading, fetchGames } = useGames()
 const route = useRoute()
 const games = ref([])
 const categories = ref([])
 // games where the player is in the promotion slots of their league
 const promotionGameIds = ref([])
+// the categories are rows of the database, named in French by the seeder: Action, Réflexion
+function categoryLabel(name) {
+  const key = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+  const labels = { action: t('games.category_action'), reflexion: t('games.category_reflexion') }
+  return labels[key] ?? name
+}
 
 fetchGames().then((data) => {
   games.value = data.data
@@ -45,7 +53,7 @@ function getStarImage(game) {
       {
         label: $t('games.selection'), value: 'favs', route: {name: 'games.index'} },
       ...categories.map((cat) => ({
-        label: cat.name,
+        label: categoryLabel(cat.name),
         value: cat.name,
         route: { name: 'games.index', query: { category: cat.name } },
       })),

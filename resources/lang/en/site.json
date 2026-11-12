@@ -389,6 +389,8 @@
     "not_found": "Game not found. ({error})",
     "remaining_runs": "You have {count} game left to play today | You have {count} games left to play today",
     "selection": "Selection",
+    "category_action": "Action",
+    "category_reflexion": "Puzzle",
     "play": "Play {game}",
     "favorite_alt": "Favorite game",
     "star_alt": "star {star}",

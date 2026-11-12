@@ -389,6 +389,8 @@
     "not_found": "Jeu introuvable. ({error})",
     "remaining_runs": "Il vous reste {count} partie à jouer aujourd'hui | Il vous reste {count} parties à jouer aujourd'hui",
     "selection": "Sélection",
+    "category_action": "Action",
+    "category_reflexion": "Réflexion",
     "play": "Jouer à {game}",
     "favorite_alt": "Jeu favori",
     "star_alt": "star {star}",
