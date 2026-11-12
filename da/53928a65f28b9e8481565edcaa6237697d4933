@@ -1,0 +1,31 @@
+app/Enums/LocalePreference.php
+  s_bdee25dbb283eb::t_130291b2e45da8 11-26
+app/Filament/Pages/ManageSiteSettings.php
+  s_bdee25dbb283eb::t_e2bce9fccfa821 5,35,46-47,50
+app/Settings/SiteSettings.php
+  s_bdee25dbb283eb::t_9d073d5e36194f 5,15-16,72-75,79-80,86,89-99
+database/settings/2026_11_12_000000_translate_the_announcement.php
+  s_bdee25dbb283eb::t_d343f81ce222f1 1-19
+tests/Feature/AnnouncementTest.php
+  s_bdee25dbb283eb::t_3e6a969f08ecd1 13-14,19,25,30,39,42,46-92
+tests/Feature/BroadcastTest.php
+  s_bdee25dbb283eb::t_6224fa4b11d4db 199,203-204
+tests/Feature/SettingsPagesTest.php
+  s_bdee25dbb283eb::t_54049ea437c179 96-110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "da53928a65f28b9e8481565edcaa6237697d4933",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
