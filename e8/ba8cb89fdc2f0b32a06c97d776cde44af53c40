@@ -1,0 +1,31 @@
+resources/lang/en/games/autrement.json
+  s_bdee25dbb283eb::t_167779b47c9fef 1-3
+resources/lang/en/games/brutalteenagecrisis.json
+  s_bdee25dbb283eb::t_c9db74f01514ff 1-4
+resources/lang/en/games/f1champion.json
+  s_bdee25dbb283eb::t_d9f1deb8788058 1-3
+resources/lang/en/games/interwheel.json
+  s_bdee25dbb283eb::t_a8afb9d6949637 1-3
+resources/lang/en/games/kavern.json
+  s_bdee25dbb283eb::t_95c1b5bf4dd590 1-3
+resources/lang/en/games/pioupiou.json
+  s_bdee25dbb283eb::t_35fef17a056e40 1-3
+resources/lang/en/games/travoltax.json
+  s_bdee25dbb283eb::t_161b18a1421b2b 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e8ba8cb89fdc2f0b32a06c97d776cde44af53c40",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}

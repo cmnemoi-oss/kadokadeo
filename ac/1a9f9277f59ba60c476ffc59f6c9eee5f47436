@@ -1,0 +1,23 @@
+resources/hx/games/labrute/Lang.hx
+  s_bdee25dbb283eb::t_adfd538f4ad225 29,34-35
+resources/hx/games/labrute/README.md
+  s_bdee25dbb283eb::t_1b2ef359cc9b7b 49
+resources/hx/lib/kado/I18n.hx
+  s_bdee25dbb283eb::t_49c40c69ba3aa6 41-45,47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ac1a9f9277f59ba60c476ffc59f6c9eee5f47436",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
