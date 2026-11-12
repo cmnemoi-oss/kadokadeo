@@ -1,0 +1,23 @@
+resources/hx/games/greenwitch/Fx.hx
+  s_bdee25dbb283eb::t_170c13e5b72fa3 403
+resources/lang/en/games/greenwitch.json
+  s_bdee25dbb283eb::t_cbe4b3f1403ebd 27-28
+resources/lang/fr/games/greenwitch.json
+  s_bdee25dbb283eb::t_ba4817ff99506e 27-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8e8da723b161ce0af871929094da14e115b12364",
+  "prompts": {},
+  "sessions": {
+    "s_bdee25dbb283eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6a0bf738-17f8-434a-b8c4-c3f05f98fcad",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
