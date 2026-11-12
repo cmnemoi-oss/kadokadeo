@@ -274,7 +274,7 @@ class Ent {
 	public function fxDamage(n:Null<Int>) {
 		var mc = floor.dm.empty(Square.DP_FX);
 		var top = root != null ? root.getLocalBounds().y : -Cs.CS;
-		new LossPart(mc, (x + 0.5) * Cs.CS, (y + 0.5) * Cs.CS + top, n == null ? "miss" : Std.string(n), n == null ? 0x000000 : 0xFF0000);
+		new LossPart(mc, (x + 0.5) * Cs.CS, (y + 0.5) * Cs.CS + top, n == null ? Lang.miss : Std.string(n), n == null ? 0x000000 : 0xFF0000);
 	}
 
 	public function fxStrike(id:Null<Int>, di:Int) {

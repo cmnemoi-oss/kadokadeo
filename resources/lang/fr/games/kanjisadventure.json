@@ -88,5 +88,6 @@
   "ground_floor": "rez-de-chaussée",
   "first_basement": "1er sous-sol",
   "second_basement": "2d sous-sol",
-  "floor": "{floor}ème étage"
+  "floor": "{floor}ème étage",
+  "miss": "miss"
 }

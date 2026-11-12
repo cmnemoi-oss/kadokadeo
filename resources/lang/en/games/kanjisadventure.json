@@ -88,5 +88,6 @@
   "ground_floor": "ground floor",
   "first_basement": "first basement",
   "second_basement": "second basement",
-  "floor": "floor {floor}"
+  "floor": "floor {floor}",
+  "miss": "miss"
 }
