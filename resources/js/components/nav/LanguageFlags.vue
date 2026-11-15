@@ -31,7 +31,7 @@ function choose(flag) {
 </script>
 
 <template>
-  <ul v-if="isShown" class="flex flex-col gap-0.5">
+  <ul v-if="isShown" class="flex w-max flex-col gap-0.5">
     <li v-for="flag in FLAGS" :key="flag.locale">
       <button type="button"
               class="block"

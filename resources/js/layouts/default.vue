@@ -19,9 +19,11 @@ const sidebarOpen = ref(false)
     <NavTopBar @menu="sidebarOpen = true" />
     <header id="topPage" class="mx-auto w-full max-w-5xl h-[100px] flex relative justify-center z-10">
       <div class="flex flex-col items-center justify-center">
-        <div class="flex items-start gap-1 mx-auto mb-5">
-          <NavLanguageFlags />
-          <img src="/gfx/logoBasic.png" :alt="$t('common.site_name')" class="h-fit w-auto" />
+        <div class="flex items-center mx-auto mb-5 md:relative md:block">
+          <!-- against the "k" of the logo (the image starts with a transparent margin); outside of it from md, so that
+               the logo stays centred: on a phone the logo takes the whole width, the flags take a part of it -->
+          <NavLanguageFlags class="-mr-2 md:absolute md:right-full md:top-1/2 md:-translate-y-1/2" />
+          <img src="/gfx/logoBasic.png" :alt="$t('common.site_name')" class="h-fit w-auto min-w-0" />
         </div>
         <Starbar v-if="authStore.isAuthenticated" />
       </div>
