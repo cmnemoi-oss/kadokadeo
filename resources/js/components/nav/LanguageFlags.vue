@@ -10,18 +10,23 @@ const FLAGS = [
 ]
 
 const authStore = useAuthStore()
-const { saveLocale } = useAccount()
+const { error, saveLocale } = useAccount()
+const toastStore = useToastStore()
 const { t } = useI18n()
 
 const isShown = computed(() => window.Kado?.i18n_enabled && authStore.isAuthenticated)
 const nameOf = (flag) => ({ en: t('language.en'), fr: t('language.fr') })[flag.locale]
 const isLanguageOfThePage = (flag) => flag.locale === pageLocale()
 
-// a refused choice keeps the page as it is
 function choose(flag) {
   if (!isLanguageOfThePage(flag)) {
-    chooseLocale(flag.locale, { save: saveLocale, reload: reloadPage }).catch(() => {})
+    chooseLocale(flag.locale, { save: saveLocale, reload: reloadPage }).catch(tellWhyTheLanguageWasRefused)
   }
+}
+
+// the flags have no place for an error under them, unlike the choice of the account page
+function tellWhyTheLanguageWasRefused() {
+  toastStore.show({ title: t('language.title'), text: error.value })
 }
 </script>
 

@@ -4,18 +4,21 @@ import { beforeEach, expect, test, vi } from 'vitest'
 
 import { createAppI18n } from '@/i18n'
 import { useAuthStore } from '@/stores/auth'
+import { useToastStore } from '@/stores/toast'
 
 import LanguageFlags from './LanguageFlags.vue'
 
 const save = vi.fn()
 const reload = vi.fn()
 
+const error = { value: null }
+
 vi.mock('@/composables/useAccount', () => ({
-  useAccount: () => ({ error: { value: null }, saveLocale: save }),
+  useAccount: () => ({ error, saveLocale: save }),
 }))
 vi.mock('@/i18n/reload', () => ({ reloadPage: () => reload() }))
 
-const TEXTS = { language: { fr: 'Français', en: 'English (beta)' } }
+const TEXTS = { language: { title: 'Langue', fr: 'Français', en: 'English (beta)' } }
 
 function renderFlags({ enabled = true, loggedIn = true, pageLocale = 'fr' } = {}) {
   window.evts = new EventTarget()
@@ -31,6 +34,7 @@ function renderFlags({ enabled = true, loggedIn = true, pageLocale = 'fr' } = {}
 beforeEach(() => {
   save.mockReset().mockResolvedValue()
   reload.mockReset()
+  error.value = null
 })
 
 test('with the languages off, there is no flag', () => {
@@ -39,7 +43,7 @@ test('with the languages off, there is no flag', () => {
   expect(screen.queryAllByRole('button')).toEqual([])
 })
 
-test('a visitor has no flag: the browser chooses for him', () => {
+test('a visitor has no flag: the browser chooses the language', () => {
   renderFlags({ loggedIn: false })
 
   expect(screen.queryAllByRole('button')).toEqual([])
@@ -69,12 +73,16 @@ test('the flag of the page changes nothing', async() => {
   expect(save).not.toHaveBeenCalled()
 })
 
-test('a choice the server refused keeps the page', async() => {
-  save.mockRejectedValue(new Error('down'))
+test('a choice the server refused keeps the page and tells the player why', async() => {
+  save.mockImplementation(async() => {
+    error.value = 'La requête a échoué.'
+    throw new Error('down')
+  })
   renderFlags()
 
   await fireEvent.click(screen.getByTitle('English (beta)'))
-  await vi.waitFor(() => expect(save).toHaveBeenCalled())
+  await vi.waitFor(() => expect(useToastStore().toasts).toHaveLength(1))
 
+  expect(useToastStore().toasts[0]).toMatchObject({ title: 'Langue', text: 'La requête a échoué.' })
   expect(reload).not.toHaveBeenCalled()
 })
