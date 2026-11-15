@@ -1,13 +1,9 @@
 <script setup>
-// the flags beside the logo, as on KadoKado: the language of the account (the same choice as account/LanguageSelector),
-// only when the languages are on (App\Settings\SiteSettings::$i18n_enabled) and for a player (a visitor has the
-// language of the browser: nothing to save it on)
 import { useI18n } from 'vue-i18n'
 
 import { chooseLocale, pageLocale } from '@/i18n/locale'
 import { reloadPage } from '@/i18n/reload'
 
-// the languages of the site (App\Enums\LocalePreference) and their flags of KadoKado
 const FLAGS = [
   { locale: 'en', src: '/gfx/langEnglish.gif' },
   { locale: 'fr', src: '/gfx/langFrench.gif' },
@@ -18,7 +14,6 @@ const { saveLocale } = useAccount()
 const { t } = useI18n()
 
 const isShown = computed(() => window.Kado?.i18n_enabled && authStore.isAuthenticated)
-// literal keys: scripts/lint-i18n.mjs checks them against the catalog
 const nameOf = (flag) => ({ en: t('language.en'), fr: t('language.fr') })[flag.locale]
 const isLanguageOfThePage = (flag) => flag.locale === pageLocale()
 
