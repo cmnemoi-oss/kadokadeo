@@ -20,9 +20,9 @@ vi.mock('@/i18n/reload', () => ({ reloadPage: () => reload() }))
 
 const TEXTS = { language: { title: 'Langue', fr: 'Français', en: 'English (beta)' } }
 
-function renderFlags({ enabled = true, loggedIn = true, pageLocale = 'fr' } = {}) {
+function renderFlags({ enabled = true, loggedIn = true, pageLocale = 'fr', locales = ['fr', 'en'] } = {}) {
   window.evts = new EventTarget()
-  window.Kado = { i18n_enabled: enabled, locale: pageLocale }
+  window.Kado = { i18n_enabled: enabled, locale: pageLocale, locales }
   const pinia = createPinia()
   setActivePinia(pinia)
   if (loggedIn) {
@@ -54,6 +54,18 @@ test('a player sees one flag by language, the one of the page pressed', () => {
 
   expect(screen.getAllByRole('img').map((flag) => flag.alt)).toEqual(['English (beta)', 'Français'])
   expect(screen.getByRole('button', { pressed: true }).title).toBe('Français')
+})
+
+test('there is one flag by language of the site', () => {
+  renderFlags({ locales: ['fr'] })
+
+  expect(screen.getAllByRole('img').map((flag) => flag.alt)).toEqual(['Français'])
+})
+
+test('a language of the site without a flag of KadoKado has no flag', () => {
+  renderFlags({ locales: ['fr', 'en', 'eo'] })
+
+  expect(screen.getAllByRole('img').map((flag) => flag.alt)).toEqual(['English (beta)', 'Français'])
 })
 
 test('a player who clicks a flag saves its language and reloads the page in it', async() => {
