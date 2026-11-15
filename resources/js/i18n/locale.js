@@ -9,7 +9,7 @@ export const pageLocale = () => window.Kado?.locale ?? 'fr'
 
 export const siteLanguages = () => window.Kado?.locales ?? ['fr']
 
-export const languageName = (language) => ({ fr: t('language.fr'), en: t('language.en') })[language]
+export const languageName = (language) => t(`language.${language}`)
 
 // a text the server gives in each language ({ fr, en }), French when the page's one is not written
 export const inPageLanguage = (texts) => texts[pageLocale()] ?? texts.fr

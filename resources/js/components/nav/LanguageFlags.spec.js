@@ -52,7 +52,7 @@ test('a visitor has no flag: the browser chooses the language', () => {
 test('a player sees one flag by language, the one of the page pressed', () => {
   renderFlags()
 
-  expect(screen.getAllByRole('img').map((flag) => flag.alt)).toEqual(['English (beta)', 'Français'])
+  expect(screen.getAllByRole('img').map((flag) => flag.alt)).toEqual(['Français', 'English (beta)'])
   expect(screen.getByRole('button', { pressed: true }).title).toBe('Français')
 })
 
@@ -62,10 +62,10 @@ test('there is one flag by language of the site', () => {
   expect(screen.getAllByRole('img').map((flag) => flag.alt)).toEqual(['Français'])
 })
 
-test('a language of the site without a flag of KadoKado has no flag', () => {
-  renderFlags({ locales: ['fr', 'en', 'eo'] })
+test('the flag of a language is named after it', () => {
+  renderFlags()
 
-  expect(screen.getAllByRole('img').map((flag) => flag.alt)).toEqual(['English (beta)', 'Français'])
+  expect(screen.getAllByRole('img').map((flag) => flag.getAttribute('src'))).toEqual(['/gfx/flags/fr.gif', '/gfx/flags/en.gif'])
 })
 
 test('a player who clicks a flag saves its language and reloads the page in it', async() => {

@@ -3,12 +3,7 @@ import { t } from '@/i18n'
 import { chooseLocale, languageName, pageLocale, siteLanguages } from '@/i18n/locale'
 import { reloadPage } from '@/i18n/reload'
 
-// in the order of KadoKado, English on top
-const FLAGS = [
-  { locale: 'en', src: '/gfx/langEnglish.gif' },
-  { locale: 'fr', src: '/gfx/langFrench.gif' },
-]
-const flags = FLAGS.filter((flag) => siteLanguages().includes(flag.locale))
+const flags = siteLanguages().map((locale) => ({ locale, src: `/gfx/flags/${locale}.gif` }))
 
 const authStore = useAuthStore()
 const { error, saveLocale } = useAccount()
