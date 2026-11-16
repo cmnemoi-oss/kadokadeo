@@ -4,24 +4,18 @@ namespace Tests\Feature;
 
 use App\Models\PushSubscription;
 use App\Models\User;
-use App\Settings\SiteSettings;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\Sanctum;
 use PHPUnit\Framework\Attributes\DataProvider;
+use Tests\Concerns\EnablesPush;
 use Tests\TestCase;
 
 // a device of a player subscribed to the pushes (the button of his preferences): one player by device, ten devices at most
 class PushSubscriptionTest extends TestCase
 {
-    use RefreshDatabase;
+    use EnablesPush, RefreshDatabase;
 
     private const ENDPOINT = 'https://fcm.googleapis.com/fcm/send/device-1';
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-        $this->setPushEnabled(true);
-    }
 
     public function test_the_pushes_are_off_by_default(): void
     {
@@ -162,13 +156,6 @@ class PushSubscriptionTest extends TestCase
         $this->postJson('/api/logout', ['push_endpoint' => self::ENDPOINT])->assertNoContent();
 
         $this->assertSame(['https://fcm.googleapis.com/fcm/send/other-device'], PushSubscription::pluck('endpoint')->all());
-    }
-
-    private function setPushEnabled(bool $enabled): void
-    {
-        $settings = app(SiteSettings::class);
-        $settings->push_enabled = $enabled;
-        $settings->save();
     }
 
     // what PushSubscription.toJSON() gives in the browser: a public key P-256 (65 bytes) and an auth secret (16 bytes)
