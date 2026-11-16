@@ -74,3 +74,51 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(staticFile(event, url.search !== '' || /^\/(build|vendor)\//.test(url.pathname)))
   }
 })
+
+// A push of the server (App\Push): { title, body, url, tag }. A push with the same tag takes the place of the one before
+// (a push sent twice is seen once). Not shown when a window of the site has the focus: its toast is enough.
+self.addEventListener('push', (event) => {
+  event.waitUntil((async() => {
+    const push = readPush(event.data)
+    if (!push || await siteHasTheFocus()) {
+      return
+    }
+    await self.registration.showNotification(push.title, { body: push.body, tag: push.tag, icon: '/icons/icon-192.png', data: { url: push.url } })
+  })())
+})
+
+// (a payload the server did not write: nothing to show)
+function readPush(data) {
+  try {
+    const push = data?.json()
+    return typeof push?.title === 'string' ? push : null
+  } catch {
+    return null
+  }
+}
+
+async function siteHasTheFocus() {
+  const windows = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
+  return windows.some((siteWindow) => siteWindow.focused)
+}
+
+// the page of the push, in a window of the site if one is open (only a window of this worker can be sent to a page)
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close()
+  event.waitUntil((async() => {
+    const url = pageOfTheSite(event.notification.data?.url)
+    const [siteWindow] = await self.clients.matchAll({ type: 'window' })
+    if (!siteWindow) {
+      await self.clients.openWindow(url)
+      return
+    }
+    await siteWindow.focus()
+    await siteWindow.navigate(url)
+  })())
+})
+
+// never a page out of the site, whatever the payload says
+function pageOfTheSite(url) {
+  const page = new URL(url ?? '/', location.origin)
+  return page.origin === location.origin ? page.href : `${location.origin}/`
+}
