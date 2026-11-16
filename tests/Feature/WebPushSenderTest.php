@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\PushSubscription;
 use App\Push\PushMessage;
 use App\Push\PushOutcome;
+use App\Push\PushSender;
 use App\Push\WebPushSender;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ConnectException;
@@ -46,6 +47,15 @@ class WebPushSenderTest extends TestCase
         $this->assertSame($outcome, $this->aSender($answer)->send($this->aDevice(), $this->aMessage()));
     }
 
+    // only the two keys in the environment (README): the address of the site is the subject
+    public function test_the_sender_of_the_site_is_made_from_its_keys_alone(): void
+    {
+        $keys = VAPID::createVapidKeys();
+        config(['services.webpush' => ['public_key' => $keys['publicKey'], 'private_key' => $keys['privateKey'], 'subject' => null]]);
+
+        $this->assertInstanceOf(WebPushSender::class, app(PushSender::class));
+    }
+
     public function test_a_push_service_out_of_reach_is_tried_again(): void
     {
         $sender = $this->aSender(new ConnectException('timeout', new Request('POST', self::ENDPOINT)));
@@ -70,7 +80,7 @@ class WebPushSenderTest extends TestCase
         $handler = HandlerStack::create(new MockHandler([$answer]));
         $handler->push(Middleware::history($this->sent));
 
-        return new WebPushSender(['subject' => 'https://kadokadeo.example', ...VAPID::createVapidKeys()], new Client(['handler' => $handler]));
+        return new WebPushSender(['subject' => 'https://kadokadeo.example', ...VAPID::createVapidKeys()], new Client(['handler' => $handler]), app('log'));
     }
 
     // a device as a browser gives it: its public key P-256 and its auth secret

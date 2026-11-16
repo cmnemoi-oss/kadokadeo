@@ -125,7 +125,7 @@ On an iPhone or an iPad, only the site added to the home screen gets pushes (iOS
 | Variable                    | Description                                                                         | Default                 |
 | --------------------------- | ----------------------------------------------------------------------------------- | ----------------------- |
 | `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY` | The keys of the server for the push services (`kado:vapid-keys`)         |                         |
-| `VAPID_SUBJECT`             | The address of the site given to the push services                                   | `APP_URL`               |
+| `VAPID_SUBJECT`             | The address of the site given to the push services                                   | `SELF_URL`              |
 
 ### External services
 

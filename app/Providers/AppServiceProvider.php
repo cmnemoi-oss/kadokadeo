@@ -42,10 +42,10 @@ class AppServiceProvider extends ServiceProvider
     {
         // (the keys are read when a push is sent: no keys while the pushes are off)
         $this->app->bind(PushSender::class, fn () => new WebPushSender([
-            'subject' => config('services.webpush.subject'),
+            'subject' => config('services.webpush.subject') ?? config('app.url'),
             'publicKey' => config('services.webpush.public_key'),
             'privateKey' => config('services.webpush.private_key'),
-        ], new Client(['timeout' => 10, 'connect_timeout' => 5])));
+        ], new Client(['timeout' => 10, 'connect_timeout' => 5]), app('log')));
         $this->app->bind(RunService::class, fn () => new RunService(config('kado.security')));
         $this->app->bind(GameService::class, fn () => new GameService());
         $this->app->bind(ScoreService::class, fn () => new ScoreService());

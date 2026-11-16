@@ -8,6 +8,7 @@ use Minishlink\WebPush\MessageSentReport;
 use Minishlink\WebPush\Subscription;
 use Minishlink\WebPush\WebPush;
 use Psr\Http\Client\ClientInterface;
+use Psr\Log\LoggerInterface;
 
 // The pushes through the push services of the browsers (Web Push, RFC 8030), signed with the keys of the server
 // (VAPID, config services.webpush): the only place that knows the library.
@@ -18,11 +19,13 @@ class WebPushSender implements PushSender
 
     private readonly WebPush $webPush;
 
+    // (its warnings in the log: without it they are PHP notices, turned into exceptions by Laravel, e.g. a server without
+    // the GMP or BCMath extension could send no push)
     /** @param array{subject: string, publicKey: string, privateKey: string} $vapid */
-    public function __construct(array $vapid, ClientInterface $http)
+    public function __construct(array $vapid, ClientInterface $http, LoggerInterface $log)
     {
         $factory = new HttpFactory();
-        $this->webPush = new WebPush(['VAPID' => $vapid], ['TTL' => self::KEPT_WHILE_THE_DEVICE_SLEEPS], $http, $factory, $factory);
+        $this->webPush = new WebPush(['VAPID' => $vapid], ['TTL' => self::KEPT_WHILE_THE_DEVICE_SLEEPS], $http, $factory, $factory, logger: $log);
     }
 
     public function send(PushSubscription $subscription, PushMessage $message): PushOutcome
