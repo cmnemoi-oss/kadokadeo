@@ -1,0 +1,59 @@
+resources/js/sw.js
+  s_d761060b624cc3::t_016587a434227c 78-80,84
+app/Http/Controllers/Api/PushSubscriptionController.php
+  s_d761060b624cc3::t_daf54e61c1bda1 8-11,44-57
+  s_d761060b624cc3::t_c2797cc87280ad 58-59
+tests/Feature/PushMessagesTest.php
+  s_d761060b624cc3::t_f6c84aad143948 130-139
+resources/lang/fr/server.json
+  s_d761060b624cc3::t_daf54e61c1bda1 236-239
+resources/js/composables/usePush.spec.js
+  s_d761060b624cc3::t_943466fb7d8d36 130-150
+app/Console/Commands/SendTestPush.php
+  s_d761060b624cc3::t_daf54e61c1bda1 6,28
+resources/lang/en/site.json
+  s_d761060b624cc3::t_016587a434227c 979-982
+app/Push/PushMessages.php
+  s_d761060b624cc3::t_daf54e61c1bda1 33-44
+app/Push/PushMessage.php
+  s_d761060b624cc3::t_daf54e61c1bda1 19-20,26,29-31
+resources/lang/en/server.json
+  s_d761060b624cc3::t_daf54e61c1bda1 236-239
+resources/lang/fr/site.json
+  s_d761060b624cc3::t_016587a434227c 979-982
+routes/api.php
+  s_d761060b624cc3::t_daf54e61c1bda1 82
+tests/Feature/PushSubscriptionTest.php
+  s_d761060b624cc3::t_f6c84aad143948 7-8,13,164-219
+  s_d761060b624cc3::t_90a9b518ae7b46 220
+resources/js/components/account/PushDevice.spec.js
+  s_d761060b624cc3::t_943466fb7d8d36 9,24-26,39,86-112
+resources/js/composables/usePush.js
+  s_d761060b624cc3::t_016587a434227c 76-88,91
+resources/js/components/account/PushDevice.vue
+  s_d761060b624cc3::t_016587a434227c 6,9-22,48-49
+  s_d761060b624cc3::t_a26bbb17c82e57 51
+resources/js/sw.spec.js
+  s_d761060b624cc3::t_943466fb7d8d36 64-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9eec115a663ee7f62f36722a937d54ac4f3cb7b9",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_d761060b624cc3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "44416549-5c69-4347-b90b-e7cf9984673e",
+        "model": "unknown"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
