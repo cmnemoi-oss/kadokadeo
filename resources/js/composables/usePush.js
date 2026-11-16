@@ -73,9 +73,22 @@ export function usePush() {
     }
   }
 
+  // sent at once to this device: what its push service answered ('delivered', 'gone', 'retry' or 'rejected'); a device
+  // gone from its push service is subscribed no more
+  async function sendTest() {
+    const subscription = await currentSubscription()
+    const response = await client.post('/push-subscriptions/test', { endpoint: subscription?.endpoint })
+    const { outcome } = response.data.data
+    if (outcome === 'gone') {
+      await subscription.unsubscribe()
+      await refresh()
+    }
+    return outcome
+  }
+
   refresh()
 
-  return { state, subscribe, unsubscribe }
+  return { state, subscribe, unsubscribe, sendTest }
 }
 
 // the browser may change the address of its subscription without a word: given again at each opening

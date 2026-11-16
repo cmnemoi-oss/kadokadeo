@@ -976,6 +976,9 @@
     "receive": "Recevoir les notifications sur cet appareil, même quand le site est fermé (commentaires et réponses sur les replays, candidatures au clan)",
     "unsupported": "Ce navigateur ne peut pas recevoir de notifications. Sur iPhone ou iPad, ajoutez d'abord le site à l'écran d'accueil, puis ouvrez-le depuis son icône.",
     "denied": "Les notifications sont bloquées pour ce site dans les réglages de votre navigateur. Autorisez-les là pour les recevoir.",
-    "failed": "Les notifications n'ont pas pu être activées sur cet appareil. Réessayez plus tard."
+    "failed": "Les notifications n'ont pas pu être activées sur cet appareil. Réessayez plus tard.",
+    "send_test": "Envoyer une notification de test",
+    "test_sent": "Notification envoyée : elle doit apparaître sur cet appareil dans quelques secondes.",
+    "test_failed": "La notification de test n'a pas pu être envoyée à cet appareil. Désactivez puis réactivez les notifications, ou réessayez plus tard."
   }
 }

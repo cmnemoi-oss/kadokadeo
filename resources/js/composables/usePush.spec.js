@@ -127,6 +127,27 @@ test('a player who unsubscribes tells the server first, then his browser', async
   expect(push.state.value).toBe('unsubscribed')
 })
 
+test('a player sends a test push to this device and reads what its push service answered', async() => {
+  aBrowser({ permission: 'granted', subscribed: true })
+  const { usePush } = await loadPush()
+  client.post.mockResolvedValue({ data: { data: { outcome: 'delivered' } } })
+  const push = usePush()
+
+  expect(await push.sendTest()).toBe('delivered')
+  expect(client.post).toHaveBeenCalledWith('/push-subscriptions/test', { endpoint: ENDPOINT })
+})
+
+test('a test push to a device gone from its push service shows the device unsubscribed', async() => {
+  const browser = aBrowser({ permission: 'granted', subscribed: true })
+  const { usePush } = await loadPush()
+  client.post.mockResolvedValue({ data: { data: { outcome: 'gone' } } })
+  const push = usePush()
+
+  expect(await push.sendTest()).toBe('gone')
+  expect(browser.subscription).toBeNull()
+  expect(push.state.value).toBe('unsubscribed')
+})
+
 test('at each opening, the subscription of the device is given again to the server', async() => {
   aBrowser({ permission: 'granted', subscribed: true })
   const { resyncPush } = await loadPush()

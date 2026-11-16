@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\EnsurePushIsEnabled;
 use App\Http\Requests\PushSubscriptionRequest;
+use App\Models\PushSubscription;
+use App\Push\PushMessages;
+use App\Push\PushOutcome;
+use App\Push\PushSender;
 use App\Services\PushSubscriptionService;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
@@ -35,6 +39,22 @@ class PushSubscriptionController extends Controller implements HasMiddleware
         );
 
         return response()->noContent();
+    }
+
+    // the player sees for himself that the pushes work on this device: sent at once, what its push service answered
+    public function test(Request $request, PushSender $pushServices)
+    {
+        $subscription = PushSubscription::query()
+            ->where('user_id', $request->user()->id)
+            ->where('endpoint', (string) $request->input('endpoint'))
+            ->firstOrFail();
+
+        $outcome = $pushServices->send($subscription, PushMessages::test(app()->getLocale()));
+        if ($outcome === PushOutcome::GONE) {
+            $subscription->delete();
+        }
+
+        return ['data' => ['outcome' => strtolower($outcome->name)]];
     }
 
     public function destroy(Request $request)

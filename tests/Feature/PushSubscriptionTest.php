@@ -4,10 +4,13 @@ namespace Tests\Feature;
 
 use App\Models\PushSubscription;
 use App\Models\User;
+use App\Push\PushOutcome;
+use App\Push\PushSender;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\Sanctum;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\Concerns\EnablesPush;
+use Tests\Fakes\FakePushSender;
 use Tests\TestCase;
 
 // a device of a player subscribed to the pushes (the button of his preferences): one player by device, ten devices at most
@@ -156,6 +159,63 @@ class PushSubscriptionTest extends TestCase
         $this->postJson('/api/logout', ['push_endpoint' => self::ENDPOINT])->assertNoContent();
 
         $this->assertSame(['https://fcm.googleapis.com/fcm/send/other-device'], PushSubscription::pluck('endpoint')->all());
+    }
+
+    // the player sees for himself that the pushes work on his device
+    public function test_a_player_sends_a_test_push_to_his_device(): void
+    {
+        $pushServices = $this->fakePushServices();
+        Sanctum::actingAs(User::factory()->create());
+        $this->postJson('/api/push-subscriptions', self::aSubscription())->assertNoContent();
+
+        $this->postJson('/api/push-subscriptions/test', ['endpoint' => self::ENDPOINT])->assertOk()->assertJsonPath('data.outcome', 'delivered');
+
+        [$push] = $pushServices->deliveredTo(self::ENDPOINT);
+        $this->assertTrue($push->payload()['test']);
+    }
+
+    public function test_a_test_push_to_a_device_gone_forgets_it(): void
+    {
+        $pushServices = $this->fakePushServices();
+        Sanctum::actingAs(User::factory()->create());
+        $this->postJson('/api/push-subscriptions', self::aSubscription())->assertNoContent();
+        $pushServices->answers(self::ENDPOINT, PushOutcome::GONE);
+
+        $this->postJson('/api/push-subscriptions/test', ['endpoint' => self::ENDPOINT])->assertOk()->assertJsonPath('data.outcome', 'gone');
+
+        $this->assertSame(0, PushSubscription::count());
+    }
+
+    public function test_a_player_cannot_send_a_test_push_to_the_device_of_another_one(): void
+    {
+        $pushServices = $this->fakePushServices();
+        Sanctum::actingAs(User::factory()->create());
+        $this->postJson('/api/push-subscriptions', self::aSubscription())->assertNoContent();
+
+        Sanctum::actingAs(User::factory()->create());
+        $this->postJson('/api/push-subscriptions/test', ['endpoint' => self::ENDPOINT])->assertNotFound();
+
+        $this->assertSame([], $pushServices->delivered);
+    }
+
+    public function test_the_test_pushes_are_limited(): void
+    {
+        $this->fakePushServices();
+        Sanctum::actingAs(User::factory()->create());
+        $this->postJson('/api/push-subscriptions', self::aSubscription())->assertNoContent();
+
+        foreach (range(1, 3) as $try) {
+            $this->postJson('/api/push-subscriptions/test', ['endpoint' => self::ENDPOINT])->assertOk();
+        }
+        $this->postJson('/api/push-subscriptions/test', ['endpoint' => self::ENDPOINT])->assertTooManyRequests();
+    }
+
+    private function fakePushServices(): FakePushSender
+    {
+        $pushServices = new FakePushSender();
+        $this->app->instance(PushSender::class, $pushServices);
+
+        return $pushServices;
     }
 
     // what PushSubscription.toJSON() gives in the browser: a public key P-256 (65 bytes) and an auth secret (16 bytes)

@@ -127,6 +127,16 @@ class PushMessagesTest extends TestCase
         $this->assertLessThan(4096, strlen(json_encode($message->payload())));
     }
 
+    // shown even over the site: the player is looking at it
+    public function test_a_test_push_says_it_is_one(): void
+    {
+        app('translator')->addLines(['server.push.test.title' => 'EN test', 'server.push.test.body' => 'EN it works'], 'en');
+
+        $message = PushMessages::test('en');
+
+        $this->assertSame(['title' => 'EN test', 'body' => 'EN it works', 'url' => '/account/preferences', 'tag' => 'test', 'test' => true], $message->payload());
+    }
+
     public function test_the_payload_is_what_the_service_worker_reads(): void
     {
         $message = new PushMessage(title: 'A title', body: 'A body', url: '/runs/1', tag: 'notification:1');

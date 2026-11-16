@@ -3,9 +3,23 @@ import { pushIsOn, usePush } from '@/composables/usePush'
 
 // the pushes on this device (resources/js/composables/usePush.js): the permission of the browser is asked at the click
 const isShown = pushIsOn()
-const { state, subscribe, unsubscribe } = usePush()
+const { state, subscribe, unsubscribe, sendTest } = usePush()
 const isBusy = ref(false)
 const failed = ref(false)
+// 'sent' or 'failed', once a test push was sent
+const testResult = ref(null)
+
+const test = async() => {
+  isBusy.value = true
+  testResult.value = null
+  try {
+    testResult.value = await sendTest() === 'delivered' ? 'sent' : 'failed'
+  } catch {
+    testResult.value = 'failed'
+  } finally {
+    isBusy.value = false
+  }
+}
 
 const choose = async(receive) => {
   isBusy.value = true
@@ -31,6 +45,9 @@ const choose = async(receive) => {
                   @update:model-value="choose">
       {{ $t('push.receive') }}
     </FormCheckbox>
+    <FormButton v-if="state === 'subscribed'" :disabled="isBusy" @click="test">{{ $t('push.send_test') }}</FormButton>
+    <MessageSuccess v-if="testResult === 'sent'">{{ $t('push.test_sent') }}</MessageSuccess>
     <MessageError v-if="failed">{{ $t('push.failed') }}</MessageError>
+    <MessageError v-else-if="testResult === 'failed'">{{ $t('push.test_failed') }}</MessageError>
   </section>
 </template>

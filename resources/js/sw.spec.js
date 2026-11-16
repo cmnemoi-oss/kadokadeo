@@ -61,6 +61,14 @@ test('a push is not shown when a window of the site has the focus: its toast is 
   expect(worker.shown).toEqual([])
 })
 
+test('a test push is shown even when a window of the site has the focus: the player is looking for it', async() => {
+  const worker = await aServiceWorker({ windows: [aWindow({ focused: true })] })
+
+  await worker.push(JSON.stringify({ title: 'Test', body: 'It works', url: '/account/preferences', tag: 'test', test: true }))
+
+  expect(worker.shown).toEqual([expect.objectContaining({ title: 'Test' })])
+})
+
 test.each([
   ['no payload', undefined],
   ['a payload that is not JSON', 'not json'],

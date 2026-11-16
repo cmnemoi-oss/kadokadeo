@@ -30,6 +30,18 @@ final class PushMessages
         return new PushMessage(title: $title, body: $body, url: self::pageOf($notification), tag: "notification:{$notification->id}");
     }
 
+    // the player tries the pushes on his device, from his preferences
+    public static function test(string $locale): PushMessage
+    {
+        return new PushMessage(
+            title: __('server.push.test.title', locale: $locale),
+            body: __('server.push.test.body', locale: $locale),
+            url: '/account/preferences',
+            tag: 'test',
+            isTest: true,
+        );
+    }
+
     private static function pageOf(UserNotification $notification): string
     {
         return match ($notification->type) {

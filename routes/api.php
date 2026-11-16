@@ -79,6 +79,7 @@ Route::delete('/notifications', [NotificationController::class, 'destroyAll']);
 Route::delete('/notifications/{notification}', [NotificationController::class, 'destroy'])->whereNumber('notification');
 // the devices of the player subscribed to the pushes
 Route::post('/push-subscriptions', [PushSubscriptionController::class, 'store']);
+Route::post('/push-subscriptions/test', [PushSubscriptionController::class, 'test'])->middleware('throttle:3,1');
 Route::delete('/push-subscriptions', [PushSubscriptionController::class, 'destroy']);
 Route::put('/user/preferences', [UserPreferenceController::class, 'update']);
 Route::put('/user/locale', [UserPreferenceController::class, 'updateLocale']);

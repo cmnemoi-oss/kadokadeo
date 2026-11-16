@@ -16,15 +16,18 @@ final readonly class PushMessage
 
     public string $body;
 
-    public function __construct(string $title, string $body, public string $url, public string $tag)
+    // a test push (the button of the preferences): shown even over the site, the player is looking at it
+    public function __construct(string $title, string $body, public string $url, public string $tag, public bool $isTest = false)
     {
         $this->title = Str::limit($title, self::MAX_TITLE_LENGTH - 1, '…');
         $this->body = Str::limit($body, self::MAX_BODY_LENGTH - 1, '…');
     }
 
-    /** @return array{title: string, body: string, url: string, tag: string} */
+    /** @return array{title: string, body: string, url: string, tag: string, test?: true} */
     public function payload(): array
     {
-        return ['title' => $this->title, 'body' => $this->body, 'url' => $this->url, 'tag' => $this->tag];
+        $payload = ['title' => $this->title, 'body' => $this->body, 'url' => $this->url, 'tag' => $this->tag];
+
+        return $this->isTest ? [...$payload, 'test' => true] : $payload;
     }
 }

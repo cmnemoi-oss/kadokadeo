@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\PushSubscription;
-use App\Push\PushMessage;
+use App\Push\PushMessages;
 use App\Push\PushSender;
 use Illuminate\Console\Command;
 
@@ -25,7 +25,7 @@ class SendTestPush extends Command
 
         // (after: the keys are read when the sender is made)
         $pushServices = app(PushSender::class);
-        $message = new PushMessage(title: 'KadoKadéo', body: 'Test push', url: '/', tag: 'test');
+        $message = PushMessages::test(app()->getLocale());
         foreach ($devices as $device) {
             $this->line("{$device->endpoint}: {$pushServices->send($device, $message)->name}");
         }

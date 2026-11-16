@@ -233,6 +233,10 @@
     "clan_refused": {
       "title": "Application refused",
       "body": "Your application to the clan :clan was refused: your Kado points have been given back."
+    },
+    "test": {
+      "title": "Notifications on",
+      "body": "This device receives the notifications of KadoKadéo."
     }
   }
 }
