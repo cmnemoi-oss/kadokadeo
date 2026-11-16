@@ -1,0 +1,39 @@
+app/Jobs/SendPush.php
+  s_d761060b624cc3::t_3729e001ea76c6 1-80
+app/Push/PushOutcome.php
+  s_d761060b624cc3::t_3729e001ea76c6 1-15
+app/Push/PushSender.php
+  s_d761060b624cc3::t_3729e001ea76c6 1-11
+tests/Feature/PushNotificationTest.php
+  s_d761060b624cc3::t_3729e001ea76c6 173-184
+  s_d761060b624cc3::t_73fb5e182c6d25 92-93,96,98
+  s_d761060b624cc3::t_1401b8ed1fb1c3 1-91,94-95,97,99-172,185-329
+app/Services/NotificationService.php
+  s_d761060b624cc3::t_3729e001ea76c6 16,19,26,29-30,176-188
+tests/Fakes/FakePushSender.php
+  s_d761060b624cc3::t_00977af32e7f8e 27
+  s_d761060b624cc3::t_1401b8ed1fb1c3 1-26,28-41
+app/Push/PushChannel.php
+  s_d761060b624cc3::t_3729e001ea76c6 1-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "11e56255eb03aeed9a70948e0d030a676e17058c",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_d761060b624cc3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "44416549-5c69-4347-b90b-e7cf9984673e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
