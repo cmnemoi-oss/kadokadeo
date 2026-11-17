@@ -15,7 +15,6 @@ use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Str;
 
-// the devices of the player subscribed to the pushes (the button of his preferences)
 class PushSubscriptionController extends Controller implements HasMiddleware
 {
     public static function middleware()
@@ -41,7 +40,6 @@ class PushSubscriptionController extends Controller implements HasMiddleware
         return response()->noContent();
     }
 
-    // the player sees for himself that the pushes work on this device: sent at once, what its push service answered
     public function test(Request $request, PushSender $pushServices)
     {
         $subscription = PushSubscription::query()

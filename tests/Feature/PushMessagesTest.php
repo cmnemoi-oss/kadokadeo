@@ -13,7 +13,6 @@ use App\Push\PushMessages;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
-// the push of a notification on a device: its text in the language of the player, the page it opens
 class PushMessagesTest extends TestCase
 {
     protected function setUp(): void
@@ -113,7 +112,6 @@ class PushMessagesTest extends TestCase
         $this->assertSame('FR Bob commented', PushMessages::for($notification, 'fr')->body);
     }
 
-    // the push services refuse a payload over 4 KB
     public function test_a_long_text_is_cut(): void
     {
         $notification = $this->aNotification(NotificationType::CLAN_APPLICATION);
@@ -125,7 +123,6 @@ class PushMessagesTest extends TestCase
         $this->assertLessThan(4096, strlen(json_encode($message->payload())));
     }
 
-    // shown even over the site: the player is looking at it
     public function test_a_test_push_says_it_is_one(): void
     {
         app('translator')->addLines(['server.push.test.title' => 'EN test', 'server.push.test.body' => 'EN it works'], 'en');

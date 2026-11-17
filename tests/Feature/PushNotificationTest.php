@@ -26,8 +26,6 @@ use Tests\Concerns\EnablesPush;
 use Tests\Fakes\FakePushSender;
 use Tests\TestCase;
 
-// A notification that interrupts the player goes to each of his devices, through the queue: written with the
-// notification (both or neither), retried while the push service is down, dropped when it is out of date.
 class PushNotificationTest extends TestCase
 {
     use EnablesClans, EnablesPush, RefreshDatabase;
@@ -37,7 +35,6 @@ class PushNotificationTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        // the queue of the production: the jobs are rows written with the notifications
         config(['queue.default' => 'database']);
         $this->pushServices = new FakePushSender();
         $this->app->instance(PushSender::class, $this->pushServices);
@@ -170,7 +167,6 @@ class PushNotificationTest extends TestCase
         $this->assertSame(0, DB::table('failed_jobs')->count());
     }
 
-    // a device shared by two players: the pushes of the first one do not go to the next one
     public function test_a_device_gone_to_another_player_before_the_push_is_not_pushed(): void
     {
         $player = $this->aPlayerWithDevices('shared-tablet');
@@ -228,7 +224,6 @@ class PushNotificationTest extends TestCase
         $this->assertSame(1, DB::table('failed_jobs')->count());
     }
 
-    // our fault (the payload, the keys of the server): trying again would not change it
     public function test_a_push_refused_is_not_tried_again_and_the_device_is_kept(): void
     {
         $player = $this->aPlayerWithDevices('phone');

@@ -5,8 +5,7 @@ namespace App\Services;
 use App\Models\PushSubscription;
 use App\Models\User;
 
-// The devices of a player subscribed to the pushes. A device belongs to the last player who subscribed it (a device
-// shared by two players), and leaves at his logout.
+// a device shared by two players belongs to the last one who subscribed it
 class PushSubscriptionService
 {
     // a player's old devices leave rather than piling up (a browser reinstalled gets a new address)

@@ -23,7 +23,6 @@ use Illuminate\Support\Facades\DB;
 // a preference of the player, App\Enums\UserPreference), the likes of a comment in one notification (it comes back on
 // top, unread, at each like), the applications to their clan (leader and right hands) and their own one answered. Never
 // for what the player did himself. Deleted by the player, or two months after their last change (UserNotification).
-// The ones that interrupt the player also go to his devices (App\Push\PushChannel).
 class NotificationService
 {
     public function __construct(private readonly PushChannel $push) {}

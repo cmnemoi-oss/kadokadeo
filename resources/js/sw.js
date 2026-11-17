@@ -75,9 +75,7 @@ self.addEventListener('fetch', (event) => {
   }
 })
 
-// A push of the server (App\Push): { title, body, url, tag, test? }. A push with the same tag takes the place of the one
-// before (a push sent twice is seen once). Not shown when a window of the site has the focus: its toast is enough. A test
-// push (the button of the preferences) is: the player is looking for it.
+// Not shown when a window of the site has the focus: its toast is enough. A test push is: the player is looking for it.
 self.addEventListener('push', (event) => {
   event.waitUntil((async() => {
     const push = readPush(event.data)
@@ -88,7 +86,6 @@ self.addEventListener('push', (event) => {
   })())
 })
 
-// (a payload the server did not write: nothing to show)
 function readPush(data) {
   try {
     const push = data?.json()

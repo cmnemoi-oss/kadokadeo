@@ -20,7 +20,6 @@ use Psr\Http\Message\RequestInterface;
 use Symfony\Component\HttpFoundation\Response as Status;
 use Tests\TestCase;
 
-// the answers of the push services of the browsers (RFC 8030), read as what to do with the device
 class WebPushSenderTest extends TestCase
 {
     private const ENDPOINT = 'https://fcm.googleapis.com/fcm/send/device-1';
@@ -48,7 +47,6 @@ class WebPushSenderTest extends TestCase
         $this->assertSame($outcome, $this->aSender($answer)->send($this->aDevice(), $this->aMessage()));
     }
 
-    // only the two keys in the environment (README): the address of the site is the subject
     public function test_the_sender_of_the_site_is_made_from_its_keys_alone(): void
     {
         $keys = VAPID::createVapidKeys();
@@ -71,7 +69,7 @@ class WebPushSenderTest extends TestCase
         $request = $this->sent[0]['request'];
         $this->assertSame(self::ENDPOINT, (string) $request->getUri());
         $this->assertSame('aes128gcm', $request->getHeaderLine('Content-Encoding'));
-        $this->assertSame((string) WebPushSender::KEPT_WHILE_THE_DEVICE_SLEEPS, $request->getHeaderLine('TTL'));
+        $this->assertSame((string) WebPushSender::KEPT_WHILE_THE_DEVICE_SLEEPS_IN_SECONDS, $request->getHeaderLine('TTL'));
         $this->assertStringStartsWith('vapid ', $request->getHeaderLine('Authorization'));
         $this->assertStringNotContainsString('A comment', (string) $request->getBody());
     }
@@ -84,7 +82,6 @@ class WebPushSenderTest extends TestCase
         return new WebPushSender(['subject' => 'https://kadokadeo.example', ...VAPID::createVapidKeys()], new Client(['handler' => $handler]), app('log'));
     }
 
-    // a device as a browser gives it: its public key P-256 and its auth secret
     private function aDevice(): PushSubscription
     {
         $device = openssl_pkey_get_details(openssl_pkey_new(['private_key_type' => OPENSSL_KEYTYPE_EC, 'curve_name' => 'prime256v1']))['ec'];

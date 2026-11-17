@@ -13,7 +13,6 @@ use Tests\Concerns\EnablesPush;
 use Tests\Fakes\FakePushSender;
 use Tests\TestCase;
 
-// a device of a player subscribed to the pushes (the button of his preferences): one player by device, ten devices at most
 class PushSubscriptionTest extends TestCase
 {
     use EnablesPush, RefreshDatabase;
@@ -148,7 +147,6 @@ class PushSubscriptionTest extends TestCase
         $this->assertSame(1, PushSubscription::count());
     }
 
-    // a device shared by two players: the next one does not get the pushes of the first one
     public function test_the_device_is_unsubscribed_at_logout(): void
     {
         $player = User::factory()->create();
@@ -161,7 +159,6 @@ class PushSubscriptionTest extends TestCase
         $this->assertSame(['https://fcm.googleapis.com/fcm/send/other-device'], PushSubscription::pluck('endpoint')->all());
     }
 
-    // the player sees for himself that the pushes work on his device
     public function test_a_player_sends_a_test_push_to_his_device(): void
     {
         $pushServices = $this->fakePushServices();
@@ -218,7 +215,6 @@ class PushSubscriptionTest extends TestCase
         return $pushServices;
     }
 
-    // what PushSubscription.toJSON() gives in the browser: a public key P-256 (65 bytes) and an auth secret (16 bytes)
     private static function aSubscription(string $endpoint = self::ENDPOINT): array
     {
         return [

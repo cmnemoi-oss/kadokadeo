@@ -5,8 +5,7 @@ namespace App\Http\Requests;
 use Closure;
 use Illuminate\Foundation\Http\FormRequest;
 
-// what PushSubscription.toJSON() gives in the browser. The server sends its pushes to the endpoint: only the push
-// services of the browsers (else the server would send requests wherever the request says)
+// the server sends requests to the endpoint: only the push services of the browsers (SSRF)
 class PushSubscriptionRequest extends FormRequest
 {
     // a public key P-256, uncompressed

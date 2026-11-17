@@ -1,7 +1,6 @@
 <script setup>
 import { pushIsOn, usePush } from '@/composables/usePush'
 
-// the pushes on this device (resources/js/composables/usePush.js): the permission of the browser is asked at the click
 const isShown = pushIsOn()
 const { state, subscribe, unsubscribe, sendTest } = usePush()
 const isBusy = ref(false)

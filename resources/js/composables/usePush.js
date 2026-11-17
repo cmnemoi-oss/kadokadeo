@@ -2,9 +2,7 @@ import { shallowRef } from 'vue'
 
 import { client } from './useApi'
 
-// The pushes on this device (App\Http\Controllers\Api\PushSubscriptionController), shown by the service worker
-// (resources/js/sw.js). On when the server gives its public key (App\Settings\SiteSettings::$push_enabled). The permission
-// of the browser is only asked on a click of the player: a refusal is final.
+// The permission of the browser is only asked on a click of the player: a refusal is final.
 
 export function pushIsOn() {
   return Boolean(window.Kado?.push_public_key)
@@ -73,8 +71,7 @@ export function usePush() {
     }
   }
 
-  // sent at once to this device: what its push service answered ('delivered', 'gone', 'retry' or 'rejected'); a device
-  // gone from its push service is subscribed no more
+  // what its push service answered: 'delivered', 'gone', 'retry' or 'rejected'
   async function sendTest() {
     const subscription = await currentSubscription()
     const response = await client.post('/push-subscriptions/test', { endpoint: subscription?.endpoint })

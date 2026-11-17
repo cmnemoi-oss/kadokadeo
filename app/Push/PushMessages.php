@@ -6,8 +6,7 @@ use App\Enums\NotificationType;
 use App\Models\UserNotification;
 use LogicException;
 
-// the push of a notification of a player (App\Services\NotificationService): its text in his language, the page it
-// opens (the same as its link in the tab « Notifications », resources/js/composables/useNotifications.js)
+// the page it opens: the same as the link of the notification (resources/js/composables/useNotifications.js)
 final class PushMessages
 {
     public static function for(UserNotification $notification, string $locale): PushMessage
@@ -30,7 +29,6 @@ final class PushMessages
         return PushMessage::ofNotification($notification->id, $title, $body, url: self::pageOf($notification));
     }
 
-    // the player tries the pushes on his device, from his preferences
     public static function test(string $locale): PushMessage
     {
         return PushMessage::test(

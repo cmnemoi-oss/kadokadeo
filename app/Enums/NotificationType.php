@@ -18,8 +18,7 @@ enum NotificationType: string
     // his application refused by the leader or a right hand (his Kado points given back)
     case CLAN_REFUSED = 'clan_refused';
 
-    // worth a push on his devices, even with the site closed: what he waits for or has to answer (App\Push\PushChannel).
-    // Not the likes: one push by like would make him turn everything off
+    // not the likes: one push by like would make the player turn everything off
     public function interruptsPlayer(): bool
     {
         return match ($this) {

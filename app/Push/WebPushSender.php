@@ -11,12 +11,10 @@ use Psr\Http\Client\ClientInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Response;
 
-// The pushes through the push services of the browsers (Web Push, RFC 8030), signed with the keys of the server
-// (VAPID, config services.webpush): the only place that knows the library.
+// the only place that knows the library
 class WebPushSender implements PushSender
 {
-    // in seconds: a device off or asleep gets the push when it wakes up within a day, never after
-    public const KEPT_WHILE_THE_DEVICE_SLEEPS = 86400;
+    public const KEPT_WHILE_THE_DEVICE_SLEEPS_IN_SECONDS = 86400;
 
     private readonly WebPush $webPush;
 
@@ -26,7 +24,7 @@ class WebPushSender implements PushSender
     public function __construct(array $vapid, ClientInterface $http, LoggerInterface $log)
     {
         $factory = new HttpFactory();
-        $this->webPush = new WebPush(['VAPID' => $vapid], ['TTL' => self::KEPT_WHILE_THE_DEVICE_SLEEPS], $http, $factory, $factory, logger: $log);
+        $this->webPush = new WebPush(['VAPID' => $vapid], ['TTL' => self::KEPT_WHILE_THE_DEVICE_SLEEPS_IN_SECONDS], $http, $factory, $factory, logger: $log);
     }
 
     public function send(PushSubscription $subscription, PushMessage $message): PushOutcome
@@ -48,7 +46,6 @@ class WebPushSender implements PushSender
         return match (true) {
             $report->isSuccess() => PushOutcome::DELIVERED,
             $report->isSubscriptionExpired() => PushOutcome::GONE,
-            // out of reach, down, or asking to slow down
             $status === null, $status === Response::HTTP_TOO_MANY_REQUESTS, $status >= Response::HTTP_INTERNAL_SERVER_ERROR => PushOutcome::RETRY,
             default => PushOutcome::REJECTED,
         };

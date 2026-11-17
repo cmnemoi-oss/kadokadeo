@@ -7,8 +7,6 @@ use App\Push\PushMessage;
 use App\Push\PushOutcome;
 use App\Push\PushSender;
 
-// the push services of the browsers, faked: what each device received, and what a push service answers (delivered by
-// default)
 class FakePushSender implements PushSender
 {
     /** @var array<string, list<PushMessage>> the messages delivered, by endpoint */

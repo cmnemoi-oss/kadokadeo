@@ -7,9 +7,8 @@ use App\Models\PushSubscription;
 use App\Models\UserNotification;
 use App\Settings\SiteSettings;
 
-// A notification that interrupts the player (NotificationType::interruptsPlayer) goes to each of his devices, one job
-// by device: a device whose push service is down does not hold back the others. Called in the transaction that writes
-// the notification: the jobs are rows of the same database (QUEUE_CONNECTION=database), written with it or not at all.
+// One job by device: a push service down does not hold back the others. Called in the transaction of the notification:
+// the jobs are rows of the same database (queue "database"), written with it or not at all.
 class PushChannel
 {
     public function __construct(private readonly SiteSettings $settings) {}

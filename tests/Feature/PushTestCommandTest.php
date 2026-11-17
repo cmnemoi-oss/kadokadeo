@@ -10,7 +10,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\Fakes\FakePushSender;
 use Tests\TestCase;
 
-// a push sent at once to the devices of a player, to try the keys and the push services in production
 class PushTestCommandTest extends TestCase
 {
     use RefreshDatabase;

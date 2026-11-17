@@ -39,7 +39,6 @@ export function aPushBrowser({ permission = 'default', subscribed = false, answe
   return browser
 }
 
-// the API of the site behind the real client
 export function aPushServer({ down = false, testOutcome = 'delivered' } = {}) {
   const server = { devices: [], testsSent: [], down, testOutcome }
   const reply = (config, data = {}) => ({ status: 200, statusText: 'OK', headers: {}, config, data })

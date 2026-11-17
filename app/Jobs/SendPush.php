@@ -14,15 +14,11 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 use RuntimeException;
 
-// The push of a notification to a device (App\Push\PushChannel). Read again when it is sent: nothing if the
-// notification is gone or read meanwhile, if the device went to another player, or if the pushes were turned off.
-// A push service down is tried again for about two hours, then the push is dropped (failed_jobs).
 class SendPush implements ShouldQueue
 {
     use Queueable;
 
-    // in seconds, after each try that failed
-    private const RETRY_DELAYS = [60, 300, 1800, 7200];
+    private const RETRY_DELAYS_IN_SECONDS = [60, 300, 1800, 7200];
 
     public int $tries = 5;
 
@@ -31,7 +27,7 @@ class SendPush implements ShouldQueue
     /** @return list<int> */
     public function backoff(): array
     {
-        return self::RETRY_DELAYS;
+        return self::RETRY_DELAYS_IN_SECONDS;
     }
 
     public function handle(PushSender $pushServices, SiteSettings $settings): void
@@ -68,7 +64,7 @@ class SendPush implements ShouldQueue
 
             return;
         }
-        $this->release(self::RETRY_DELAYS[$this->attempts() - 1]);
+        $this->release(self::RETRY_DELAYS_IN_SECONDS[$this->attempts() - 1]);
     }
 
     private function refused(): void

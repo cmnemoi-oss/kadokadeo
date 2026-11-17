@@ -7,7 +7,6 @@ use App\Push\PushMessages;
 use App\Push\PushSender;
 use Illuminate\Console\Command;
 
-// to try the keys (VAPID) and the push services before turning the pushes on: sent at once, even with them off
 class SendTestPush extends Command
 {
     protected $signature = 'kado:push-test {user : the id of the player}';

@@ -4,7 +4,6 @@ namespace App\Push;
 
 use Illuminate\Support\Str;
 
-// what a device shows of a push (read by resources/js/sw.js): a push with the same tag takes the place of the one before
 final readonly class PushMessage
 {
     // the push services refuse a payload over 4 KB, encrypted: a long name of clan or of player is cut

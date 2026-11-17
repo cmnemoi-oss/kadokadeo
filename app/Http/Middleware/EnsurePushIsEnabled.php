@@ -7,7 +7,6 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-// the routes of the pushes, unknown while they are turned off in the admin (SiteSettings::$push_enabled)
 class EnsurePushIsEnabled
 {
     public function handle(Request $request, Closure $next): Response
