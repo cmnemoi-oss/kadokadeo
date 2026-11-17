@@ -314,10 +314,10 @@ class PushNotificationTest extends TestCase
         return $this->postJson("/api/runs/{$run->id}/comments", ['frame' => 64, 'content' => 'Joli coup'])->assertCreated()->json('data.id');
     }
 
-    // the worker of the production, until no push is waiting (the ones tried again later stay)
+    // (the whole suite is over the 128 MB at which a worker stops after its job)
     private function deliverPushes(): void
     {
-        Artisan::call('queue:work', ['connection' => 'database', '--stop-when-empty' => true]);
+        Artisan::call('queue:work', ['connection' => 'database', '--stop-when-empty' => true, '--memory' => PHP_INT_MAX]);
     }
 
     private function setLanguagesEnabled(bool $enabled): void
