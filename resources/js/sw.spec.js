@@ -2,7 +2,6 @@ import { afterEach, expect, test, vi } from 'vitest'
 
 const SITE = 'http://kadokadeo.localhost'
 
-// the real sw.js in a fake service worker: the windows of the site it sees, what it shows and opens
 async function aServiceWorker({ windows = [] } = {}) {
   const listeners = {}
   const shown = []
@@ -31,12 +30,22 @@ async function aServiceWorker({ windows = [] } = {}) {
     shown,
     opened,
     push: (payload) => dispatch('push', { data: payload === undefined ? null : { json: () => JSON.parse(payload) } }),
-    click: (data) => dispatch('notificationclick', { notification: { data, close: vi.fn() } }),
+    click: (data) => dispatch('notificationclick', { notification: { data, close: () => {} } }),
   }
 }
 
 function aWindow({ focused = false } = {}) {
-  return { focused, focus: vi.fn().mockResolvedValue(), navigate: vi.fn().mockResolvedValue() }
+  const siteWindow = {
+    focused,
+    page: null,
+    focus: async() => {
+      siteWindow.focused = true
+    },
+    navigate: async(url) => {
+      siteWindow.page = url
+    },
+  }
+  return siteWindow
 }
 
 const aPush = JSON.stringify({ title: 'A comment', body: 'on your replay', url: '/replays/1', tag: 'notification:1' })
@@ -87,8 +96,8 @@ test('a click on a push brings a window of the site to its page', async() => {
 
   await worker.click({ url: '/replays/1' })
 
-  expect(window.focus).toHaveBeenCalledOnce()
-  expect(window.navigate).toHaveBeenCalledWith(`${SITE}/replays/1`)
+  expect(window.focused).toBe(true)
+  expect(window.page).toBe(`${SITE}/replays/1`)
   expect(worker.opened).toEqual([])
 })
 

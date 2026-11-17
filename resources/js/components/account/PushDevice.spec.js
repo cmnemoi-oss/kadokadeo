@@ -1,18 +1,10 @@
 import { fireEvent, render, screen } from '@testing-library/vue'
-import { beforeEach, expect, test, vi } from 'vitest'
-import { shallowRef } from 'vue'
+import { afterEach, expect, test } from 'vitest'
 
 import { createAppI18n } from '@/i18n'
+import { aPushBrowser, aPushServer, ENDPOINT, forgetPushFakes, turnPushOn } from '@/testing/push'
 
 import PushDevice from './PushDevice.vue'
-
-const push = { state: shallowRef('unsubscribed'), subscribe: vi.fn(), unsubscribe: vi.fn(), sendTest: vi.fn() }
-let isOn = true
-
-vi.mock('@/composables/usePush', () => ({
-  pushIsOn: () => isOn,
-  usePush: () => push,
-}))
 
 const TEXTS = {
   push: {
@@ -27,86 +19,110 @@ const TEXTS = {
   },
 }
 
-function renderPushDevice({ on = true, state = 'unsubscribed' } = {}) {
-  isOn = on
-  push.state.value = state
+afterEach(forgetPushFakes)
+
+function renderPushDevice() {
   return render(PushDevice, { global: { plugins: [createAppI18n('fr', { fr: TEXTS })] } })
 }
 
-beforeEach(() => {
-  push.subscribe.mockReset().mockResolvedValue()
-  push.unsubscribe.mockReset().mockResolvedValue()
-  push.sendTest.mockReset().mockResolvedValue('delivered')
-})
-
 test('with the pushes off, there is nothing to choose', () => {
-  renderPushDevice({ on: false })
+  turnPushOn(false)
+  aPushBrowser()
+
+  renderPushDevice()
 
   expect(screen.queryByText('Sur cet appareil')).toBeNull()
 })
 
 test('a player subscribes this device with a click', async() => {
+  turnPushOn()
+  aPushBrowser()
+  const server = aPushServer()
   renderPushDevice()
 
-  await fireEvent.click(screen.getByLabelText('Recevoir'))
+  await fireEvent.click(await screen.findByLabelText('Recevoir'))
 
-  expect(push.subscribe).toHaveBeenCalledOnce()
+  await screen.findByRole('button', { name: 'Tester' })
+  expect(server.devices).toEqual([ENDPOINT])
 })
 
 test('a player unsubscribes this device with a click', async() => {
-  renderPushDevice({ state: 'subscribed' })
+  turnPushOn()
+  const browser = aPushBrowser({ permission: 'granted', subscribed: true })
+  const server = aPushServer()
+  server.devices = [ENDPOINT]
+  renderPushDevice()
+  await screen.findByRole('button', { name: 'Tester' })
 
   await fireEvent.click(screen.getByLabelText('Recevoir'))
 
-  expect(push.unsubscribe).toHaveBeenCalledOnce()
+  await expect.poll(() => browser.subscription).toBeNull()
+  expect(server.devices).toEqual([])
 })
 
-test('a browser without pushes says so, without a box to check', () => {
-  renderPushDevice({ state: 'unsupported' })
+test('a browser without pushes says so, without a box to check', async() => {
+  turnPushOn()
+  aPushBrowser({ supported: false })
 
-  expect(screen.getByText('Pas de notifications ici')).toBeTruthy()
+  renderPushDevice()
+
+  expect(await screen.findByText('Pas de notifications ici')).toBeTruthy()
   expect(screen.queryByRole('checkbox')).toBeNull()
 })
 
-test('a permission refused says so, without a box to check', () => {
-  renderPushDevice({ state: 'denied' })
+test('a permission refused says so, without a box to check', async() => {
+  turnPushOn()
+  aPushBrowser({ permission: 'denied' })
 
-  expect(screen.getByText('Notifications bloquées')).toBeTruthy()
+  renderPushDevice()
+
+  expect(await screen.findByText('Notifications bloquées')).toBeTruthy()
   expect(screen.queryByRole('checkbox')).toBeNull()
 })
 
 test('a subscription that failed says so', async() => {
-  push.subscribe.mockRejectedValue(new Error('down'))
+  turnPushOn()
+  aPushBrowser()
+  aPushServer({ down: true })
   renderPushDevice()
 
-  await fireEvent.click(screen.getByLabelText('Recevoir'))
+  await fireEvent.click(await screen.findByLabelText('Recevoir'))
 
   expect(await screen.findByText('Échec')).toBeTruthy()
 })
 
-test('a device not subscribed has no test to send', () => {
+test('a device not subscribed has no test to send', async() => {
+  turnPushOn()
+  aPushBrowser()
+
   renderPushDevice()
 
+  await screen.findByLabelText('Recevoir')
   expect(screen.queryByRole('button', { name: 'Tester' })).toBeNull()
 })
 
 test('a player sends a test push and reads that it was sent', async() => {
-  renderPushDevice({ state: 'subscribed' })
+  turnPushOn()
+  aPushBrowser({ permission: 'granted', subscribed: true })
+  const server = aPushServer()
+  renderPushDevice()
 
-  await fireEvent.click(screen.getByRole('button', { name: 'Tester' }))
+  await fireEvent.click(await screen.findByRole('button', { name: 'Tester' }))
 
-  expect(push.sendTest).toHaveBeenCalledOnce()
   expect(await screen.findByText('Envoyée')).toBeTruthy()
+  expect(server.testsSent).toEqual([ENDPOINT])
 })
 
 test.each([
-  ['refused by its push service', () => push.sendTest.mockResolvedValue('rejected')],
-  ['that could not be sent', () => push.sendTest.mockRejectedValue(new Error('down'))],
-])('a test push %s says so', async(_, answer) => {
-  answer()
-  renderPushDevice({ state: 'subscribed' })
+  ['refused by its push service', { testOutcome: 'rejected' }],
+  ['that could not be sent', { down: true }],
+])('a test push %s says so', async(_, server) => {
+  turnPushOn()
+  aPushBrowser({ permission: 'granted', subscribed: true })
+  aPushServer(server)
+  renderPushDevice()
 
-  await fireEvent.click(screen.getByRole('button', { name: 'Tester' }))
+  await fireEvent.click(await screen.findByRole('button', { name: 'Tester' }))
 
   expect(await screen.findByText('Pas arrivée')).toBeTruthy()
 })
