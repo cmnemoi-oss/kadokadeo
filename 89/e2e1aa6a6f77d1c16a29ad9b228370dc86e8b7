@@ -1,0 +1,31 @@
+tests/Feature/PushMessagesTest.php
+  s_d761060b624cc3::t_ee3d98b06d08bf 62-65,140
+tests/Feature/WebPushSenderTest.php
+  s_d761060b624cc3::t_4edd3fbd975571 101
+app/Push/PushMessages.php
+  s_d761060b624cc3::t_4edd3fbd975571 30,36
+app/Push/PushMessage.php
+  s_d761060b624cc3::t_4edd3fbd975571 19,25-34
+  s_d761060b624cc3::t_f5f35314b14ce5 35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "89e2e1aa6a6f77d1c16a29ad9b228370dc86e8b7",
+  "prompts": {},
+  "humans": {
+    "h_32f94e59e2f995": {
+      "author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  },
+  "sessions": {
+    "s_d761060b624cc3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "44416549-5c69-4347-b90b-e7cf9984673e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Charles-Meldhine Madi Mnemoi <icdk5b4zf@relay.firefox.com>"
+    }
+  }
+}
