@@ -16,11 +16,21 @@ final readonly class PushMessage
 
     public string $body;
 
-    // a test push (the button of the preferences): shown even over the site, the player is looking at it
-    public function __construct(string $title, string $body, public string $url, public string $tag, public bool $isTest = false)
+    private function __construct(string $title, string $body, public string $url, public string $tag, private bool $isTest)
     {
         $this->title = Str::limit($title, self::MAX_TITLE_LENGTH - 1, '…');
         $this->body = Str::limit($body, self::MAX_BODY_LENGTH - 1, '…');
+    }
+
+    public static function ofNotification(int $notificationId, string $title, string $body, string $url): self
+    {
+        return new self($title, $body, $url, tag: "notification:{$notificationId}", isTest: false);
+    }
+
+    // shown even over the site: the player is looking for it
+    public static function test(string $title, string $body, string $url): self
+    {
+        return new self($title, $body, $url, tag: 'test', isTest: true);
     }
 
     /** @return array{title: string, body: string, url: string, tag: string, test?: true} */

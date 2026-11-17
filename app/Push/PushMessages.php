@@ -27,18 +27,16 @@ final class PushMessages
             NotificationType::COMMENT_LIKES => throw new LogicException('The likes do not interrupt the player: they have no push.'),
         };
 
-        return new PushMessage(title: $title, body: $body, url: self::pageOf($notification), tag: "notification:{$notification->id}");
+        return PushMessage::ofNotification($notification->id, $title, $body, url: self::pageOf($notification));
     }
 
     // the player tries the pushes on his device, from his preferences
     public static function test(string $locale): PushMessage
     {
-        return new PushMessage(
+        return PushMessage::test(
             title: __('server.push.test.title', locale: $locale),
             body: __('server.push.test.body', locale: $locale),
             url: '/account/preferences',
-            tag: 'test',
-            isTest: true,
         );
     }
 

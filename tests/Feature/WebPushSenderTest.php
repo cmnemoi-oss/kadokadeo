@@ -98,6 +98,6 @@ class WebPushSenderTest extends TestCase
 
     private function aMessage(): PushMessage
     {
-        return new PushMessage(title: 'A comment', body: 'on your replay', url: '/runs/1', tag: 'notification:1');
+        return PushMessage::ofNotification(1, title: 'A comment', body: 'on your replay', url: '/runs/1');
     }
 }

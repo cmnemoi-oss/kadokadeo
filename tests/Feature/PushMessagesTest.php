@@ -59,12 +59,10 @@ class PushMessagesTest extends TestCase
     {
         $message = PushMessages::for($this->aNotification(NotificationType::RUN_COMMENT), 'fr');
 
-        $this->assertEquals(new PushMessage(
-            title: 'FR comment',
-            body: 'FR Bob commented FR of Snake',
-            url: '/runs/run-1?comment=7',
-            tag: 'notification:42',
-        ), $message);
+        $this->assertSame(
+            ['title' => 'FR comment', 'body' => 'FR Bob commented FR of Snake', 'url' => '/runs/run-1?comment=7', 'tag' => 'notification:42'],
+            $message->payload(),
+        );
     }
 
     public function test_a_reply_to_his_comment_opens_the_reply(): void
@@ -139,7 +137,7 @@ class PushMessagesTest extends TestCase
 
     public function test_the_payload_is_what_the_service_worker_reads(): void
     {
-        $message = new PushMessage(title: 'A title', body: 'A body', url: '/runs/1', tag: 'notification:1');
+        $message = PushMessage::ofNotification(1, title: 'A title', body: 'A body', url: '/runs/1');
 
         $this->assertSame(['title' => 'A title', 'body' => 'A body', 'url' => '/runs/1', 'tag' => 'notification:1'], $message->payload());
     }
