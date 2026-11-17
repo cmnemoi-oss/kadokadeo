@@ -17,6 +17,7 @@ use GuzzleHttp\Psr7\Response;
 use Minishlink\WebPush\VAPID;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Psr\Http\Message\RequestInterface;
+use Symfony\Component\HttpFoundation\Response as Status;
 use Tests\TestCase;
 
 // the answers of the push services of the browsers (RFC 8030), read as what to do with the device
@@ -30,14 +31,14 @@ class WebPushSenderTest extends TestCase
     public static function answers(): array
     {
         return [
-            'created' => [new Response(201), PushOutcome::DELIVERED],
-            'gone' => [new Response(410), PushOutcome::GONE],
-            'not found' => [new Response(404), PushOutcome::GONE],
-            'too many requests' => [new Response(429), PushOutcome::RETRY],
-            'unavailable' => [new Response(503), PushOutcome::RETRY],
-            'bad request' => [new Response(400), PushOutcome::REJECTED],
-            'forbidden (the keys of the server)' => [new Response(403), PushOutcome::REJECTED],
-            'payload too large' => [new Response(413), PushOutcome::REJECTED],
+            'created' => [new Response(Status::HTTP_CREATED), PushOutcome::DELIVERED],
+            'gone' => [new Response(Status::HTTP_GONE), PushOutcome::GONE],
+            'not found' => [new Response(Status::HTTP_NOT_FOUND), PushOutcome::GONE],
+            'too many requests' => [new Response(Status::HTTP_TOO_MANY_REQUESTS), PushOutcome::RETRY],
+            'unavailable' => [new Response(Status::HTTP_SERVICE_UNAVAILABLE), PushOutcome::RETRY],
+            'bad request' => [new Response(Status::HTTP_BAD_REQUEST), PushOutcome::REJECTED],
+            'forbidden (the keys of the server)' => [new Response(Status::HTTP_FORBIDDEN), PushOutcome::REJECTED],
+            'payload too large' => [new Response(Status::HTTP_REQUEST_ENTITY_TOO_LARGE), PushOutcome::REJECTED],
         ];
     }
 
@@ -65,7 +66,7 @@ class WebPushSenderTest extends TestCase
 
     public function test_the_push_goes_encrypted_to_the_device_and_is_kept_a_day_while_it_sleeps(): void
     {
-        $this->aSender(new Response(201))->send($this->aDevice(), $this->aMessage());
+        $this->aSender(new Response(Status::HTTP_CREATED))->send($this->aDevice(), $this->aMessage());
 
         $request = $this->sent[0]['request'];
         $this->assertSame(self::ENDPOINT, (string) $request->getUri());

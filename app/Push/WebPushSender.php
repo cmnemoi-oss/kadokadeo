@@ -9,6 +9,7 @@ use Minishlink\WebPush\Subscription;
 use Minishlink\WebPush\WebPush;
 use Psr\Http\Client\ClientInterface;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\HttpFoundation\Response;
 
 // The pushes through the push services of the browsers (Web Push, RFC 8030), signed with the keys of the server
 // (VAPID, config services.webpush): the only place that knows the library.
@@ -48,7 +49,7 @@ class WebPushSender implements PushSender
             $report->isSuccess() => PushOutcome::DELIVERED,
             $report->isSubscriptionExpired() => PushOutcome::GONE,
             // out of reach, down, or asking to slow down
-            $status === null, $status === 429, $status >= 500 => PushOutcome::RETRY,
+            $status === null, $status === Response::HTTP_TOO_MANY_REQUESTS, $status >= Response::HTTP_INTERNAL_SERVER_ERROR => PushOutcome::RETRY,
             default => PushOutcome::REJECTED,
         };
     }
